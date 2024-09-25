@@ -7,6 +7,7 @@ import 'package:fut/core/storage.dart';
 import 'package:fut/feature/home/presentation/views/home_screen.dart';
 import 'package:fut/feature/layout/translation/localization_cubit.dart';
 import 'package:fut/feature/layout/translation/localization_state.dart';
+import 'package:fut/feature/splash_screen/splash_screen.dart';
 import 'package:fut/generated/l10n.dart';
 
 Future<void> main() async {
@@ -61,7 +62,7 @@ class MyApp extends StatelessWidget {
           ),
         );
       },
-      child: const HomeScreen(),
+      child: const SplashScreen(),
     );
   }
 }
