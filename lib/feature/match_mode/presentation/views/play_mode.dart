@@ -25,25 +25,30 @@ class _PlayModeScreenState extends State<PlayModeScreen> {
         leading: const CustamAppBar(),
         bottom: CustamBackButton(
           height: height * getHeight(context, 40),
-          child: Row(
-            children: [
-              Icon(
-                Icons.arrow_back_ios_new_outlined,
-                color: SharedColors.whiteColor,
-                size: width * getWidth(context, 30),
-              ),
-              Text(
-                'Back',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontFamily: 'TimesNewRoman',
-                  color: Colors.white,
-                  fontSize: width * getWidth(context, 16),
-                  letterSpacing: 0.0,
-                  fontWeight: FontWeight.bold,
+          child: GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Row(
+              children: [
+                Icon(
+                  Icons.arrow_back_ios_new_outlined,
+                  color: SharedColors.whiteColor,
+                  size: width * getWidth(context, 30),
                 ),
-              ),
-            ],
+                Text(
+                  'Back',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontFamily: 'TimesNewRoman',
+                    color: Colors.white,
+                    fontSize: width * getWidth(context, 16),
+                    letterSpacing: 0.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),

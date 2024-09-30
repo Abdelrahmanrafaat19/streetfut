@@ -5,7 +5,6 @@ import 'package:fut/core/responsive_font.dart';
 import 'package:fut/core/theme/colors.dart';
 import 'package:fut/feature/pitches/presentation/views/widgets/piches_list.dart';
 import 'package:fut/feature/pitches/presentation/views/widgets/search_field.dart';
-import 'package:fut/feature/pitches/presentation/views/widgets/titel_pitches_screen.dart';
 
 class PitchesScreens extends StatefulWidget {
   const PitchesScreens({super.key});
@@ -32,15 +31,26 @@ class _PitchesScreensState extends State<PitchesScreens>
       appBar: AppBar(
         leading: const CustamAppBar(),
         leadingWidth: width < 950 ? (width * 0.550) : (width * 0.550) * (3 / 4),
-        bottom: CustamPreferrsdSizeWidget(
-          height: height * 0.1566,
-          child: Text(
+        bottom: AppBar(
+          toolbarHeight: height * 0.1566,
+          centerTitle: true,
+          title: Text(
             "Pitches",
             style: TextStyle(
                 color: SharedColors.whiteColor,
                 fontSize: width * 0.0599,
                 fontFamily: "postnobills",
                 fontWeight: FontWeight.w800),
+          ),
+          leading: GestureDetector(
+            onTap: () {
+              Navigator.of(context).pop();
+            },
+            child: Icon(
+              Icons.arrow_back_ios,
+              color: SharedColors.whiteColor,
+              size: width * 0.0299,
+            ),
           ),
         ),
       ),

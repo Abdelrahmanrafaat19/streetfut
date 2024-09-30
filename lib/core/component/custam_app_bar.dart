@@ -14,7 +14,7 @@ class CustamAppBar extends StatelessWidget {
     debugPrint(width.toString());
     return LayoutBuilder(
       builder: (context, constraints) {
-        if (width < 900) {
+        if (width < 1000) {
           return Container(
             width: width * 0.5858,
             height: height * 0.0813,

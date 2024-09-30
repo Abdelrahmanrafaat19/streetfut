@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:fut/core/component/custam_app_bar.dart';
 import 'package:fut/core/responsive_font.dart';
 import 'package:fut/core/theme/colors.dart';
+import 'package:fut/feature/home/presentation/views/widgets/drawer.dart';
 import 'package:fut/feature/home/presentation/views/widgets/home_body.dart';
 import 'package:fut/feature/pitches/presentation/views/widgets/titel_pitches_screen.dart';
 
@@ -14,16 +15,22 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
+    debugPrint("$width   $height");
     return Scaffold(
+      key: _scaffoldKey,
+      drawer: const DrawerHome(),
       appBar: AppBar(
-        leadingWidth: width < 950 ? (width * 0.550) : (width * 0.550) * (3 / 4),
+        leadingWidth:
+            width < 1000 ? (width * 0.550) : (width * 0.550) * (3 / 4),
         leading: const CustamAppBar(),
         bottom: CustamPreferrsdSizeWidget(
-          height: width < 950 ? height * 0.12604 : (height * 0.18604) * (2 / 3),
+          height:
+              width < 1000 ? height * 0.12604 : (height * 0.18604) * (2 / 3),
           child: Container(
             margin: EdgeInsets.only(
               left: width * 0.02399,
@@ -32,15 +39,18 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
-                  height: height * 0.0534,
-                  alignment: Alignment.centerLeft,
-                  child: ImageIcon(
-                    const AssetImage(
-                      "assetes/svg/menu.png",
+                GestureDetector(
+                  onTap: () => _scaffoldKey.currentState!.openDrawer(),
+                  child: Container(
+                    height: height * 0.0534,
+                    alignment: Alignment.centerLeft,
+                    child: ImageIcon(
+                      const AssetImage(
+                        "assetes/svg/menu.png",
+                      ),
+                      color: SharedColors.whiteColor,
+                      size: width * 0.03755,
                     ),
-                    color: SharedColors.whiteColor,
-                    size: width * 0.03755,
                   ),
                 ),
                 Row(
