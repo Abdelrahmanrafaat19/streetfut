@@ -16,7 +16,7 @@ class _SmakingSwitchState extends State<SmakingSwitch> {
     double width = MediaQuery.of(context).size.width;
     // double height = MediaQuery.of(context).size.height;
     return SizedBox(
-      width: width * 0.20386,
+      width: width > 1000 ? width * 0.20386 : (width * 0.20386) * 1.5,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

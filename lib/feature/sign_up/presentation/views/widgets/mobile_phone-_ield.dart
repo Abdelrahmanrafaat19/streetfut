@@ -16,7 +16,7 @@ class _MobilePhonefieldState extends State<MobilePhonefield> {
     // double height = MediaQuery.of(context).size.height;
 
     return SizedBox(
-      width: width * 0.20386,
+      width: width > 1000 ? width * 0.20386 : (width * 0.20386) * 1.5,
       child: TextFormField(
         maxLines: 1,
         keyboardType: TextInputType.emailAddress,

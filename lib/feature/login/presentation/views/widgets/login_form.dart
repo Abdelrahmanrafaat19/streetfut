@@ -3,9 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fut/core/component/default_button.dart';
 import 'package:fut/core/responsive_font.dart';
 import 'package:fut/core/theme/colors.dart';
+import 'package:fut/feature/home/presentation/views/home_screen.dart';
 import 'package:fut/feature/login/presentation/views/widgets/sign_up_row.dart';
-import 'package:fut/feature/teams/presentation/views/teams.dart';
-import 'package:page_transition/page_transition.dart';
 
 class LoginForm extends StatefulWidget {
   final void Function()? onTap;
@@ -123,11 +122,11 @@ class _LoginFormState extends State<LoginForm> {
           height: height * 0.0953,
           child: defaultButton(
               onTap: () {
-                Navigator.of(context).pushReplacement(PageTransition(
-                    child: const TeamsScreen(),
-                    alignment: Alignment.center,
-                    type: PageTransitionType.leftToRightWithFade,
-                    duration: const Duration(seconds: 2)));
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const HomeScreen(),
+                  ),
+                );
               },
               text: "let's play",
               gradient: const LinearGradient(colors: [

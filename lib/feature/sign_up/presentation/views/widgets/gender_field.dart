@@ -16,7 +16,7 @@ class _GenderFieldState extends State<GenderField> {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     return SizedBox(
-      width: width * 0.20386,
+      width: width > 1000 ? width * 0.20386 : (width * 0.20386) * 1.5,
       child: DropdownButtonFormField<String>(
         hint: Text(
           "Geneder",

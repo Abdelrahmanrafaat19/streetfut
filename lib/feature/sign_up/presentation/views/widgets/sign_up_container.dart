@@ -15,7 +15,6 @@ import 'package:fut/feature/sign_up/presentation/views/widgets/password_field.da
 import 'package:fut/feature/sign_up/presentation/views/widgets/position_component.dart';
 import 'package:fut/feature/sign_up/presentation/views/widgets/smaker_range.dart';
 import 'package:fut/feature/sign_up/presentation/views/widgets/smaking_switch.dart';
-import 'package:page_transition/page_transition.dart';
 
 class SignUpContainer extends StatefulWidget {
   const SignUpContainer({super.key});
@@ -37,7 +36,7 @@ class _SignUpContainerState extends State<SignUpContainer> {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return Container(
-      width: width * 0.4893,
+      width: width > 1000 ? width * 0.20386 : (width * 0.20386) * 1.5,
       height: height - (height * 0.2116),
       padding: EdgeInsets.symmetric(horizontal: width * 0.032188),
       decoration: BoxDecoration(
@@ -314,11 +313,9 @@ class _SignUpContainerState extends State<SignUpContainer> {
               width: width * 0.195,
               child: defaultButton(
                   onTap: () {
-                    Navigator.of(context).pushReplacement(PageTransition(
-                        child: const LoginScreen(),
-                        alignment: Alignment.center,
-                        type: PageTransitionType.leftToRightWithFade,
-                        duration: const Duration(seconds: 2)));
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const LoginScreen(),
+                    ));
                   },
                   text: "Done",
                   gradient: const LinearGradient(colors: [

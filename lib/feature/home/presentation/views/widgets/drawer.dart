@@ -57,11 +57,9 @@ class _DrawerHomeState extends State<DrawerHome> {
                 imagePath: "assetes/images/playdrawer.png",
                 text: "Play",
                 onTap: () {
-                  Navigator.of(context).push(PageTransition(
-                      child: const PlayModeScreen(),
-                      alignment: Alignment.center,
-                      type: PageTransitionType.leftToRightWithFade,
-                      duration: const Duration(seconds: 2)));
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const PlayModeScreen(),
+                  ));
                 },
               ),
               const Divider(
@@ -71,11 +69,9 @@ class _DrawerHomeState extends State<DrawerHome> {
                 imagePath: "assetes/images/teamdrawer.png",
                 text: "Teams",
                 onTap: () {
-                  Navigator.of(context).push(PageTransition(
-                      child: const TeamsScreen(),
-                      alignment: Alignment.center,
-                      type: PageTransitionType.leftToRightWithFade,
-                      duration: const Duration(seconds: 2)));
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const TeamsScreen(),
+                  ));
                 },
               ),
               const Divider(
@@ -109,11 +105,9 @@ class _DrawerHomeState extends State<DrawerHome> {
                 imagePath: "assetes/images/pitdrawer.png",
                 text: "Pitches",
                 onTap: () {
-                  Navigator.of(context).push(PageTransition(
-                      child: const PitchesScreens(),
-                      alignment: Alignment.center,
-                      type: PageTransitionType.leftToRightWithFade,
-                      duration: const Duration(seconds: 2)));
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const PitchesScreens(),
+                  ));
                 },
               ),
               const Divider(
@@ -129,11 +123,9 @@ class _DrawerHomeState extends State<DrawerHome> {
               ),
               GestureDetector(
                 onTap: () {
-                  Navigator.of(context).push(PageTransition(
-                      child: const LoginScreen(),
-                      alignment: Alignment.center,
-                      type: PageTransitionType.leftToRightWithFade,
-                      duration: const Duration(seconds: 2)));
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const LoginScreen(),
+                  ));
                 },
                 child: Container(
                   margin:

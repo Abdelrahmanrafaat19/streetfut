@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fut/core/theme/colors.dart';
+import 'package:fut/feature/sign_up/presentation/views/sig_up_screen.dart';
 
 class SignUpRow extends StatelessWidget {
   const SignUpRow({super.key});
@@ -19,13 +20,20 @@ class SignUpRow extends StatelessWidget {
             color: SharedColors.whiteColor,
           ),
         ),
-        Text(
-          "SignUp",
-          style: TextStyle(
-            fontSize: width * 0.01716,
-            fontWeight: FontWeight.bold,
-            fontFamily: "poppin",
-            color: const Color(0xff98EE22),
+        GestureDetector(
+          onTap: () {
+            Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => const SigUpScreen(),
+            ));
+          },
+          child: Text(
+            "SignUp",
+            style: TextStyle(
+              fontSize: width * 0.01716,
+              fontWeight: FontWeight.bold,
+              fontFamily: "poppin",
+              color: const Color(0xff98EE22),
+            ),
           ),
         ),
       ],
