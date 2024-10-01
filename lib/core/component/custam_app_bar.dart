@@ -120,7 +120,7 @@ class CustamAppBar extends StatelessWidget {
                         ),
                       ),
                       SvgPicture.asset(
-                        'assetes/svg/coinfut.svg',
+                        'assetes/svg/cofut.svg',
                         width: width * 0.04371,
                         height: height * 0.0728,
                         fit: BoxFit.cover,

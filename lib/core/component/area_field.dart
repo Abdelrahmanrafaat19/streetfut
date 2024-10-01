@@ -3,23 +3,29 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fut/core/responsive_font.dart';
 import 'package:fut/core/theme/colors.dart';
 
-class AreaField extends StatefulWidget {
-  const AreaField({super.key});
+class CustamDropDwonField extends StatefulWidget {
+  final String text;
+  final List<String> data;
+  const CustamDropDwonField({
+    super.key,
+    required this.text,
+    required this.data,
+  });
 
   @override
-  State<AreaField> createState() => _AreaFieldState();
+  State<CustamDropDwonField> createState() => _CustamDropDwonFieldState();
 }
 
-class _AreaFieldState extends State<AreaField> {
+class _CustamDropDwonFieldState extends State<CustamDropDwonField> {
   String? area;
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     return SizedBox(
-      width: width > 1000 ? width * 0.20386 : (width * 0.20386) * 1.5,
+      width: width > 1000 ? width * 0.20386 : (width * 0.20386) * 1.4,
       child: DropdownButtonFormField<String>(
         hint: Text(
-          "Area",
+          widget.text,
           style: TextStyle(
             color: SharedColors.greenColor,
             fontSize: getResponsiveFont(context, fontSize: 15),
@@ -28,7 +34,7 @@ class _AreaFieldState extends State<AreaField> {
         ),
         onSaved: (val) => area = val,
         value: area,
-        items: ['Nase_City', 'New_Cairo'].map<DropdownMenuItem<String>>(
+        items: widget.data.map<DropdownMenuItem<String>>(
           (String val) {
             return DropdownMenuItem(
               value: val,
@@ -44,6 +50,7 @@ class _AreaFieldState extends State<AreaField> {
         icon: const Icon(
           Icons.arrow_drop_down_sharp,
           size: 30,
+          color: SharedColors.greenColor,
         ),
         decoration: InputDecoration(
           fillColor: SharedColors.whiteColor,

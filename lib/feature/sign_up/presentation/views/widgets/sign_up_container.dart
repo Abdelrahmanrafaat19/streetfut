@@ -4,7 +4,7 @@ import 'package:fut/core/component/default_button.dart';
 import 'package:fut/core/responsive_font.dart';
 import 'package:fut/core/theme/colors.dart';
 import 'package:fut/feature/login/presentation/views/login.dart';
-import 'package:fut/feature/sign_up/presentation/views/widgets/area_field.dart';
+import 'package:fut/core/component/area_field.dart';
 import 'package:fut/feature/sign_up/presentation/views/widgets/birthday_field.dart';
 import 'package:fut/feature/sign_up/presentation/views/widgets/email_field.dart';
 import 'package:fut/feature/sign_up/presentation/views/widgets/gender_field.dart';
@@ -97,7 +97,10 @@ class _SignUpContainerState extends State<SignUpContainer> {
               height:
                   width < 1000 ? height * 0.0388 : (height * 0.0388) * (2 / 3),
             ),
-            const AreaField(),
+            const CustamDropDwonField(
+              text: 'Area',
+              data: ["Naser_City", "New_Cairo"],
+            ),
             SizedBox(
               height:
                   width < 1000 ? height * 0.0388 : (height * 0.0388) * (2 / 3),

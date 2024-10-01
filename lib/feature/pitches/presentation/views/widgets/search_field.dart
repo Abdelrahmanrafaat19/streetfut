@@ -16,7 +16,7 @@ class _SearchFieldState extends State<SearchField> {
     var height = MediaQuery.of(context).size.height;
     return SizedBox(
       width: width * 0.4863,
-      height: height * 0.0777,
+      height: width < 1000 ? height * 0.116279 : (height * 0.116279) * (2 / 3),
       child: TextFormField(
         keyboardType: TextInputType.emailAddress,
         cursorColor: SharedColors.greyFieldsColor,

@@ -20,7 +20,7 @@ class _MyTeamScreenState extends State<MyTeamScreen> {
     return Container(
       margin: const EdgeInsets.only(bottom: 20),
       width: double.infinity,
-      height: width < 100 ? height * (1 / 2) : height * (3 / 4),
+      height: width < 1000 ? height * 0.53 : height * (3 / 4),
       child: ListView.builder(
           itemCount: 250,
           itemBuilder: (context, index) => GestureDetector(
@@ -89,7 +89,7 @@ class _MyTeamScreenState extends State<MyTeamScreen> {
                         ),
                       ),
                       SvgPicture.asset(
-                        "assetes/svg/captian.svg",
+                        "assetes/svg/capitano.svg",
                         color: const Color(0xffFFFF00),
                         width: width * 0.03219,
                         height: height * 0.05116,

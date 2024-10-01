@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:fut/core/component/area_field.dart';
 import 'package:fut/core/component/custam_app_bar.dart';
 import 'package:fut/core/responsive_font.dart';
 import 'package:fut/core/theme/colors.dart';
@@ -17,6 +18,7 @@ class _PitchesScreensState extends State<PitchesScreens>
     with SingleTickerProviderStateMixin {
   late TabController controller;
   int index = 0;
+  String? area;
   @override
   void initState() {
     controller = TabController(length: 6, vsync: this);
@@ -68,8 +70,41 @@ class _PitchesScreensState extends State<PitchesScreens>
                 height: height * 0.03398,
               ),
               SizedBox(
-                width: double.infinity,
-                child: TabBar(
+                  child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const CustamDropDwonField(
+                    text: "Choose Area",
+                    data: ["Naser_City", "New_Cairo"],
+                  ),
+                  SizedBox(
+                    width: width * 0.04399,
+                  ),
+                  const CustamDropDwonField(
+                    text: "Choose Time",
+                    data: ["100.0", "250.5"],
+                  ),
+                  SizedBox(
+                    width: width * 0.04399,
+                  ),
+                  const CustamDropDwonField(
+                    text: "Choose Price",
+                    data: ["100.0", "250.5"],
+                  ),
+                ],
+              )),
+              Builder(
+                  builder: (context) => Container(
+                      margin: EdgeInsets.symmetric(horizontal: width * 0.03606),
+                      child: const PichesList())),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+/*  TabBar(
                   controller: controller,
                   isScrollable: true,
                   splashBorderRadius: BorderRadius.circular(100.r),
@@ -131,16 +166,4 @@ class _PitchesScreensState extends State<PitchesScreens>
                         ),
                       ),
                   ],
-                ),
-              ),
-              Builder(
-                  builder: (context) => Container(
-                      margin: EdgeInsets.symmetric(horizontal: width * 0.03606),
-                      child: const PichesList())),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
+                ), */
