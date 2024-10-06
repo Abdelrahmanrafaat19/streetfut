@@ -46,6 +46,7 @@ class _MatchesAndSocialRowState extends State<MatchesAndSocialRow> {
                       borderRadius: BorderRadius.circular(5),
                       image: const DecorationImage(
                         fit: BoxFit.fill,
+                        opacity: 0.6,
                         image: AssetImage(
                           "assetes/images/Match widget.png",
                         ),
@@ -180,7 +181,7 @@ class _MatchesAndSocialRowState extends State<MatchesAndSocialRow> {
                                                                 .center,
                                                         children: [
                                                           const SizedBox(
-                                                            height: 20,
+                                                            height: 30,
                                                           ),
                                                           Text(
                                                             "OVR",
@@ -350,7 +351,7 @@ class _MatchesAndSocialRowState extends State<MatchesAndSocialRow> {
                                                                 .start,
                                                         children: [
                                                           const SizedBox(
-                                                            height: 20,
+                                                            height: 30,
                                                           ),
                                                           Text(
                                                             "OVR",

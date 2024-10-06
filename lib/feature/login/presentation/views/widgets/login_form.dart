@@ -59,8 +59,9 @@ class _LoginFormState extends State<LoginForm> {
             ),
           ),
         ),
-        const SizedBox(
-          height: 15 /*  height * 0.04126 */,
+        SizedBox(
+          height:
+              width < 1000 ? height * 0.04126 : (height * 0.04126) * (1 / 4),
         ),
         SizedBox(
           height: height * 0.10232,
@@ -111,7 +112,8 @@ class _LoginFormState extends State<LoginForm> {
           ),
         ),
         SizedBox(
-          height: height * 0.04884,
+          height:
+              width < 1000 ? height * 0.04884 : (height * 0.04884) * (1 / 4),
         ),
         const SignUpRow(),
         SizedBox(
@@ -128,7 +130,7 @@ class _LoginFormState extends State<LoginForm> {
                   ),
                 );
               },
-              text: "let's play",
+              text: "let's Play",
               gradient: const LinearGradient(colors: [
                 Color(0xff9A8E14),
                 Color(0xff95A324),

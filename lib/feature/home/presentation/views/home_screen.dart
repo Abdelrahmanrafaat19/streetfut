@@ -25,6 +25,8 @@ class _HomeScreenState extends State<HomeScreen> {
       key: _scaffoldKey,
       drawer: const DrawerHome(),
       appBar: AppBar(
+        forceMaterialTransparency: true,
+        backgroundColor: const Color(0xff131313),
         leadingWidth:
             width < 1000 ? (width * 0.550) : (width * 0.550) * (3 / 4),
         leading: const CustamAppBar(),
@@ -53,24 +55,30 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                 ),
-                Row(
-                  children: [
-                    SvgPicture.asset(
-                      "assetes/svg/eand.svg",
-                    ),
-                    const SizedBox(
-                      width: 13,
-                    ),
-                    SvgPicture.asset(
-                      "assetes/svg/pepso.svg",
-                    ),
-                    const SizedBox(
-                      width: 13,
-                    ),
-                    SvgPicture.asset(
-                      "assetes/svg/banko.svg",
-                    )
-                  ],
+                Padding(
+                  padding: EdgeInsets.only(
+                      bottom: width > 1000
+                          ? height * 0.08279
+                          : (height * 0.08279) / 2),
+                  child: Row(
+                    children: [
+                      SvgPicture.asset(
+                        "assetes/svg/eand.svg",
+                      ),
+                      const SizedBox(
+                        width: 13,
+                      ),
+                      SvgPicture.asset(
+                        "assetes/svg/pepso.svg",
+                      ),
+                      const SizedBox(
+                        width: 13,
+                      ),
+                      SvgPicture.asset(
+                        "assetes/svg/banko.svg",
+                      )
+                    ],
+                  ),
                 )
               ],
             ),

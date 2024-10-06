@@ -8,7 +8,7 @@ import 'package:fut/core/component/area_field.dart';
 import 'package:fut/feature/sign_up/presentation/views/widgets/birthday_field.dart';
 import 'package:fut/feature/sign_up/presentation/views/widgets/email_field.dart';
 import 'package:fut/feature/sign_up/presentation/views/widgets/gender_field.dart';
-import 'package:fut/feature/sign_up/presentation/views/widgets/mobile_phone-_ield.dart';
+import 'package:fut/feature/sign_up/presentation/views/widgets/mobile_phone_field.dart';
 import 'package:fut/feature/sign_up/presentation/views/widgets/name_fields.dart';
 import 'package:fut/feature/sign_up/presentation/views/widgets/nationatl_field.dart';
 import 'package:fut/feature/sign_up/presentation/views/widgets/password_field.dart';

@@ -6,7 +6,6 @@ import 'package:fut/feature/login/presentation/views/login.dart';
 import 'package:fut/feature/match_mode/presentation/views/play_mode.dart';
 import 'package:fut/feature/pitches/presentation/views/pitches.dart';
 import 'package:fut/feature/teams/presentation/views/teams.dart';
-import 'package:page_transition/page_transition.dart';
 
 class DrawerHome extends StatefulWidget {
   const DrawerHome({super.key});
@@ -42,11 +41,11 @@ class _DrawerHomeState extends State<DrawerHome> {
                 child: Image.asset(
                   'assetes/logo/logofut.png',
                   width: width < 1000
-                      ? width * 0.05901
+                      ? width * 0.05501
                       : (width * 0.05901) * (1 / 2),
                   height: width < 1000
-                      ? height * 0.16744
-                      : (height * 0.16744) * (1 / 2),
+                      ? height * 0.14744
+                      : (height * 0.14744) * (1 / 2),
                   fit: BoxFit.cover,
                 ),
               ),

@@ -20,6 +20,9 @@ class SignUpRow extends StatelessWidget {
             color: SharedColors.whiteColor,
           ),
         ),
+        const SizedBox(
+          width: 10,
+        ),
         GestureDetector(
           onTap: () {
             Navigator.of(context).push(MaterialPageRoute(

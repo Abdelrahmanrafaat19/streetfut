@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:fut/core/responsive_font.dart';
 import 'package:fut/core/theme/colors.dart';
 
 class CustamDropDwonField extends StatefulWidget {
@@ -28,7 +27,7 @@ class _CustamDropDwonFieldState extends State<CustamDropDwonField> {
           widget.text,
           style: TextStyle(
             color: SharedColors.greenColor,
-            fontSize: getResponsiveFont(context, fontSize: 15),
+            fontSize: width * 0.0160944,
             fontFamily: "poppin",
           ),
         ),

@@ -44,6 +44,7 @@ dependencies:
   device_preview: ^1.2.0
   carousel_slider: ^5.0.0
   syncfusion_flutter_sliders: ^27.1.50
+  video_player: ^2.9.1
 
 dev_dependencies:
   flutter_lints: ^4.0.0
@@ -64,6 +65,8 @@ flutter:
     - assetes/images/
     - assetes/logo/
     - assetes/svg/
+    - assetes/vedio/loginpage.mp4
+    - assetes/vedio/teampage.mp4
     - assetes/svg/pepsi.svg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
