@@ -63,7 +63,9 @@ class _PitchesScreensState extends State<PitchesScreens>
               /*    SizedBox(
                 height: height * 0.03398,
               ), */
-              const SearchField(),
+              const SearchField(
+                hint: "Search For a Pitch or Location",
+              ),
               SizedBox(
                 height: height * 0.03398,
               ),

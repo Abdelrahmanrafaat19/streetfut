@@ -34,7 +34,9 @@ class _PitchesBodyState extends State<PitchesBody>
             SizedBox(
               height: height * 0.03398,
             ),
-            const SearchField(),
+            const SearchField(
+              hint: "Search For a Pitch or Location",
+            ),
             SizedBox(
               width: double.infinity,
               child: TabBar(

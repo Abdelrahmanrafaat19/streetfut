@@ -20,14 +20,16 @@ class _CustamDropDwonFieldState extends State<CustamDropDwonField> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     return SizedBox(
       width: width > 1000 ? width * 0.20386 : (width * 0.20386) * 1.4,
+      height: width < 1000 ? height * 0.10139 : null,
       child: DropdownButtonFormField<String>(
         hint: Text(
           widget.text,
           style: TextStyle(
             color: SharedColors.greenColor,
-            fontSize: width * 0.0160944,
+            fontSize: (width * 0.0160944),
             fontFamily: "poppin",
           ),
         ),
@@ -52,6 +54,8 @@ class _CustamDropDwonFieldState extends State<CustamDropDwonField> {
           color: SharedColors.greenColor,
         ),
         decoration: InputDecoration(
+          contentPadding:
+              width < 1000 ? const EdgeInsets.symmetric(horizontal: 10) : null,
           fillColor: SharedColors.whiteColor,
           filled: true,
           focusedBorder: OutlineInputBorder(
