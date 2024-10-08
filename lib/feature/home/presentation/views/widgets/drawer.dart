@@ -6,6 +6,8 @@ import 'package:fut/feature/login/presentation/views/login.dart';
 import 'package:fut/feature/match_mode/presentation/views/play_mode.dart';
 import 'package:fut/feature/pitches/presentation/views/pitches.dart';
 import 'package:fut/feature/teams/presentation/views/teams.dart';
+import 'package:fut/feature/tournament/presentation/views/tournment.dart';
+import 'package:fut/feature/tournament/presentation/views/widgets/src/model/tournament_model.dart';
 
 class DrawerHome extends StatefulWidget {
   const DrawerHome({super.key});
@@ -79,7 +81,11 @@ class _DrawerHomeState extends State<DrawerHome> {
               DrawerContain(
                 imagePath: "assetes/images/tournmentdrawer.png",
                 text: "Tourtment",
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const TournmentScreen(),
+                  ));
+                },
               ),
               const Divider(
                 color: Color(0xff696969),

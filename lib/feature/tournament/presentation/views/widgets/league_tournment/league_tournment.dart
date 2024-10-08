@@ -6,23 +6,23 @@ import 'package:fut/core/get_width_height_method.dart';
 import 'package:fut/core/responsive_font.dart';
 import 'package:fut/core/theme/colors.dart';
 import 'package:fut/feature/teams/presentation/views/widgets/othe_teams.dart';
-import 'package:fut/feature/tournament/presentation/views/widgets/knock_out.dart';
+import 'package:fut/feature/tournament/presentation/views/widgets/league_tournment/table_league.dart';
 import 'package:video_player/video_player.dart';
 
-class MiniTournmentScreen extends StatefulWidget {
-  const MiniTournmentScreen({super.key});
+class LeagueTournmentScreen extends StatefulWidget {
+  const LeagueTournmentScreen({super.key});
 
   @override
-  State<MiniTournmentScreen> createState() => _MiniTournmentScreenState();
+  State<LeagueTournmentScreen> createState() => _LeagueTournmentScreenState();
 }
 
-class _MiniTournmentScreenState extends State<MiniTournmentScreen> {
+class _LeagueTournmentScreenState extends State<LeagueTournmentScreen> {
   List<String> teamsType = [
-    "Knockout",
+    "table",
     "Fixtures & Details",
   ];
   List screens = [
-    const KnockOutScreen(),
+    const TableLeagueScreen(),
     const OtheTeamsScreen(),
   ];
 
