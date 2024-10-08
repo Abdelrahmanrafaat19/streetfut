@@ -6,21 +6,25 @@ import 'package:fut/core/get_width_height_method.dart';
 import 'package:fut/core/responsive_font.dart';
 import 'package:fut/core/theme/colors.dart';
 import 'package:fut/feature/teams/presentation/views/widgets/create_team.dart';
-import 'package:fut/feature/teams/presentation/views/widgets/my_team.dart';
 import 'package:fut/feature/teams/presentation/views/widgets/othe_teams.dart';
+import 'package:fut/feature/tournament/presentation/views/widgets/my_tournment.dart';
 import 'package:video_player/video_player.dart';
 
-class TeamsScreen extends StatefulWidget {
-  const TeamsScreen({super.key});
+class TournmentScreen extends StatefulWidget {
+  const TournmentScreen({super.key});
 
   @override
-  State<TeamsScreen> createState() => _TeamsScreenState();
+  State<TournmentScreen> createState() => _TournmentScreenState();
 }
 
-class _TeamsScreenState extends State<TeamsScreen> {
-  List<String> teamsType = ["MyTeams", "OtherTeams", "+CreateTeam"];
+class _TournmentScreenState extends State<TournmentScreen> {
+  List<String> teamsType = [
+    "My Tournaments",
+    "Join Tournaments",
+    "Request Tournament"
+  ];
   List screens = [
-    const MyTeamScreen(),
+    const MyTournmentScreen(),
     const OtheTeamsScreen(),
     const CreateTeam()
   ];
@@ -200,7 +204,7 @@ class _TeamsScreenState extends State<TeamsScreen> {
                             fontFamily: "poppin",
                             fontSize: width < 950
                                 ? width * 0.0152
-                                : (width * 0.0252) * (3 / 4),
+                                : (width * 0.0252) * 0.5,
                             fontWeight: FontWeight.w800),
                         tabs: [
                           for (int i = 0; i < 3; i++)
@@ -220,7 +224,7 @@ class _TeamsScreenState extends State<TeamsScreen> {
                                 borderRadius: BorderRadius.circular(30.r),
                               ),
                               child: Tab(
-                                height: width < 950
+                                height: width < 1000
                                     ? height * 0.201
                                     : (height * 0.201) / 2,
                                 text: teamsType[i],

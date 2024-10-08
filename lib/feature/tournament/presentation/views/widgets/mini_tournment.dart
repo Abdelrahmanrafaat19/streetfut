@@ -5,24 +5,25 @@ import 'package:fut/core/component/custam_app_bar.dart';
 import 'package:fut/core/get_width_height_method.dart';
 import 'package:fut/core/responsive_font.dart';
 import 'package:fut/core/theme/colors.dart';
-import 'package:fut/feature/teams/presentation/views/widgets/create_team.dart';
-import 'package:fut/feature/teams/presentation/views/widgets/my_team.dart';
 import 'package:fut/feature/teams/presentation/views/widgets/othe_teams.dart';
+import 'package:fut/feature/tournament/presentation/views/widgets/knock_out.dart';
 import 'package:video_player/video_player.dart';
 
-class TeamsScreen extends StatefulWidget {
-  const TeamsScreen({super.key});
+class MiniTournmentScreen extends StatefulWidget {
+  const MiniTournmentScreen({super.key});
 
   @override
-  State<TeamsScreen> createState() => _TeamsScreenState();
+  State<MiniTournmentScreen> createState() => _MiniTournmentScreenState();
 }
 
-class _TeamsScreenState extends State<TeamsScreen> {
-  List<String> teamsType = ["MyTeams", "OtherTeams", "+CreateTeam"];
+class _MiniTournmentScreenState extends State<MiniTournmentScreen> {
+  List<String> teamsType = [
+    "Knockout",
+    "Fixtures & Details",
+  ];
   List screens = [
-    const MyTeamScreen(),
+    const KnockOutScreen(),
     const OtheTeamsScreen(),
-    const CreateTeam()
   ];
 
   int index = 0;
@@ -47,7 +48,7 @@ class _TeamsScreenState extends State<TeamsScreen> {
     var height = MediaQuery.of(context).size.height;
     debugPrint(width.toString());
     return DefaultTabController(
-      length: 3,
+      length: teamsType.length,
       child: Scaffold(
           body: Container(
         decoration: const BoxDecoration(),
@@ -167,7 +168,7 @@ class _TeamsScreenState extends State<TeamsScreen> {
                     child: Container(
                       height:
                           width < 950 ? height * 0.1096 : (height * 0.1096) / 2,
-                      margin: EdgeInsets.symmetric(horizontal: width * 0.22513),
+                      margin: EdgeInsets.symmetric(horizontal: width * 0.28513),
                       decoration: BoxDecoration(
                           color: SharedColors.greyNormalColor,
                           borderRadius: BorderRadius.circular(50.r)),
@@ -186,7 +187,7 @@ class _TeamsScreenState extends State<TeamsScreen> {
                         }),
                         indicatorPadding: EdgeInsets.symmetric(
                             horizontal: width * 0.005,
-                            vertical: height * 0.0049),
+                            vertical: height * 0.0099),
                         labelPadding: EdgeInsets.symmetric(
                             horizontal: width * 0.005,
                             vertical: height * 0.0049),
@@ -200,10 +201,10 @@ class _TeamsScreenState extends State<TeamsScreen> {
                             fontFamily: "poppin",
                             fontSize: width < 950
                                 ? width * 0.0152
-                                : (width * 0.0252) * (3 / 4),
+                                : (width * 0.0252) * 0.5,
                             fontWeight: FontWeight.w800),
                         tabs: [
-                          for (int i = 0; i < 3; i++)
+                          for (int i = 0; i < teamsType.length; i++)
                             Container(
                               alignment: Alignment.center,
                               width: width * 0.2014,
@@ -220,7 +221,7 @@ class _TeamsScreenState extends State<TeamsScreen> {
                                 borderRadius: BorderRadius.circular(30.r),
                               ),
                               child: Tab(
-                                height: width < 950
+                                height: width < 1000
                                     ? height * 0.201
                                     : (height * 0.201) / 2,
                                 text: teamsType[i],

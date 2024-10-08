@@ -83,7 +83,7 @@ class PlayModeBody extends StatelessWidget {
                         padding: EdgeInsets.only(
                             bottom: width > 1000
                                 ? height * 0.08279
-                                : (height * 0.08279)),
+                                : (height * 0.08279) / 2),
                         child: Row(
                           children: [
                             SvgPicture.asset(
