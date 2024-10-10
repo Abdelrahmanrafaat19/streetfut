@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fut/feature/tournament/presentation/views/widgets/src/model/tournament_match.dart';
+import 'package:fut/core/src/model/tournament_match.dart';
 
 /// Widget for displaying a match card in a tournament bracket.
 class BracketMatchCard extends StatelessWidget {

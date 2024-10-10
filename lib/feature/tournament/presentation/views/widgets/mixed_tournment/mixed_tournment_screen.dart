@@ -5,25 +5,25 @@ import 'package:fut/core/component/custam_app_bar.dart';
 import 'package:fut/core/get_width_height_method.dart';
 import 'package:fut/core/responsive_font.dart';
 import 'package:fut/core/theme/colors.dart';
-import 'package:fut/feature/tournament/presentation/views/widgets/league_tournment/fixture_details.dart';
-import 'package:fut/feature/tournament/presentation/views/widgets/league_tournment/table_league.dart';
+import 'package:fut/feature/teams/presentation/views/widgets/othe_teams.dart';
+import 'package:fut/feature/tournament/presentation/views/widgets/mixed_tournment/mixed_tournment_table.dart';
 import 'package:video_player/video_player.dart';
 
-class LeagueTournmentScreen extends StatefulWidget {
-  const LeagueTournmentScreen({super.key});
+class MixedTournmentScreen extends StatefulWidget {
+  const MixedTournmentScreen({super.key});
 
   @override
-  State<LeagueTournmentScreen> createState() => _LeagueTournmentScreenState();
+  State<MixedTournmentScreen> createState() => _MixedTournmentScreenState();
 }
 
-class _LeagueTournmentScreenState extends State<LeagueTournmentScreen> {
+class _MixedTournmentScreenState extends State<MixedTournmentScreen> {
   List<String> teamsType = [
     "table",
     "Fixtures & Details",
   ];
   List screens = [
-    const TableLeagueScreen(),
-    const FixtureDetailsScreen(),
+    const MixedTournmentTable(),
+    const OtheTeamsScreen(),
   ];
 
   int index = 0;

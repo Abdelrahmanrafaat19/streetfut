@@ -1,12 +1,42 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:fut/core/theme/colors.dart';
 import 'package:fut/core/src/flutter_tournament_bracket.dart';
 import 'package:fut/core/src/model/tournament_match.dart';
 import 'package:fut/core/src/model/tournament_model.dart';
+import 'package:fut/core/theme/colors.dart';
 
 final List<Tournament> _tournaments = [
+  Tournament(matches: [
+    TournamentMatch(
+      id: "2",
+      teamA: "Borussia Dortmund",
+      teamB: "assetes/images/team a.png",
+      scoreTeamA: "2",
+      scoreTeamB: "1",
+    ),
+    TournamentMatch(
+      id: "2",
+      teamA: "Borussia Dortmund",
+      teamB: "assetes/images/team football club.png",
+      scoreTeamA: "2",
+      scoreTeamB: "1",
+    ),
+    TournamentMatch(
+      id: "2",
+      teamA: "Borussia Dortmund",
+      teamB: "assetes/images/team a.png",
+      scoreTeamA: "2",
+      scoreTeamB: "1",
+    ),
+    TournamentMatch(
+      id: "2",
+      teamA: "Borussia Dortmund",
+      teamB: "assetes/images/team football club.png",
+      scoreTeamA: "2",
+      scoreTeamB: "1",
+    ),
+  ]),
   Tournament(matches: [
     TournamentMatch(
       id: "2",
@@ -34,14 +64,14 @@ final List<Tournament> _tournaments = [
   ])
 ];
 
-class KnockOutScreen extends StatefulWidget {
-  const KnockOutScreen({super.key});
+class MixedTournmentTable extends StatefulWidget {
+  const MixedTournmentTable({super.key});
 
   @override
-  State<KnockOutScreen> createState() => _KnockOutScreenState();
+  State<MixedTournmentTable> createState() => _MixedTournmentTableState();
 }
 
-class _KnockOutScreenState extends State<KnockOutScreen> {
+class _MixedTournmentTableState extends State<MixedTournmentTable> {
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
@@ -61,8 +91,8 @@ class _KnockOutScreenState extends State<KnockOutScreen> {
               children: [
                 TournamentBracket(
                   itemsMarginVertical: 10,
-                  cardWidth: width * 0.10656 * 1.3,
-                  cardHeight: height * 0.106279 * 1.3,
+                  cardWidth: width * 0.10656,
+                  cardHeight: height * 0.106279,
                   dirction: "left",
                   list: _tournaments,
                   card: (item) {
@@ -74,8 +104,8 @@ class _KnockOutScreenState extends State<KnockOutScreen> {
                 ),
                 TournamentBracket(
                   itemsMarginVertical: 10,
-                  cardWidth: width * 0.10656 * 1.3,
-                  cardHeight: height * 0.106279 * 1.3,
+                  cardWidth: width * 0.10656,
+                  cardHeight: height * 0.106279,
                   dirction: "ri",
                   list: _tournaments,
                   card: (item) {
@@ -138,8 +168,8 @@ class _KnockOutScreenState extends State<KnockOutScreen> {
                         image: const AssetImage(
                           "assetes/images/team football club.png",
                         ),
-                        width: width * 0.0521888,
-                        height: height * 0.093023,
+                        width: width * 0.0501888,
+                        height: height * 0.090023,
                       ),
                       Text(
                         overflow: TextOverflow.ellipsis,
@@ -181,7 +211,7 @@ Container customMatchCard(TournamentMatch? item, BuildContext context) {
           maxLines: 1,
           "Elahlawya",
           style: TextStyle(
-            fontSize: MediaQuery.of(context).size.width * 0.01072 * 1.5,
+            fontSize: MediaQuery.of(context).size.width * 0.01072,
             color: SharedColors.whiteColor,
             fontFamily: "poppin",
             fontWeight: FontWeight.w600,

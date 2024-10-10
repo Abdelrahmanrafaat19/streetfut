@@ -1,4 +1,4 @@
-import 'package:fut/feature/tournament/presentation/views/widgets/src/model/tournament_match.dart';
+import 'package:fut/core/src/model/tournament_match.dart';
 
 /// A class representing a tournament.
 ///

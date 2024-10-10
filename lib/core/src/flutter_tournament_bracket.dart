@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fut/core/theme/colors.dart';
-import 'package:fut/feature/tournament/presentation/views/widgets/src/model/tournament_match.dart';
-import 'package:fut/feature/tournament/presentation/views/widgets/src/model/tournament_model.dart';
-import 'package:fut/feature/tournament/presentation/views/widgets/src/utils/calculate_separator_height.dart';
+import 'package:fut/core/src/model/tournament_match.dart';
+import 'package:fut/core/src/model/tournament_model.dart';
+import 'package:fut/core/src/utils/calculate_separator_height.dart';
 import 'widgets/bracket_match_card.dart';
 
 class TournamentBracket extends StatelessWidget {
