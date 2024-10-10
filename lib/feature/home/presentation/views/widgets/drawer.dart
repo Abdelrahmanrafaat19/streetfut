@@ -7,7 +7,6 @@ import 'package:fut/feature/match_mode/presentation/views/play_mode.dart';
 import 'package:fut/feature/pitches/presentation/views/pitches.dart';
 import 'package:fut/feature/teams/presentation/views/teams.dart';
 import 'package:fut/feature/tournament/presentation/views/tournment.dart';
-import 'package:fut/core/src/model/tournament_model.dart';
 
 class DrawerHome extends StatefulWidget {
   const DrawerHome({super.key});
