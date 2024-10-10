@@ -170,6 +170,32 @@ class _OtheTeamsScreenState extends State<OtheTeamsScreen> {
                               ),
                             ],
                           ),
+                        ),
+                        const SizedBox(
+                          width: 30,
+                        ),
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 10),
+                          alignment: Alignment.center,
+                          // width: width * 0.14592,
+                          height: width < 1000
+                              ? height * 0.09302
+                              : (height * 0.09302) * (2 / 3),
+                          decoration: BoxDecoration(
+                            color: Colors.green,
+                            borderRadius: BorderRadius.circular(10.r),
+                          ),
+                          child: Text(
+                            "Request To Join",
+                            style: TextStyle(
+                              color: SharedColors.whiteColor,
+                              fontFamily: "poppin",
+                              fontWeight: FontWeight.bold,
+                              fontSize: width < 1000
+                                  ? width * 0.021459
+                                  : (width * 0.021459) * (2 / 3),
+                            ),
+                          ),
                         )
                       ],
                     ),
