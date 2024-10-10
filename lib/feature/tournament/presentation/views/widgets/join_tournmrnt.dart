@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:fut/core/responsive_font.dart';
 import 'package:fut/core/theme/colors.dart';
 import 'package:fut/feature/tournament/presentation/views/widgets/league_tournment/league_tournment.dart';
 import 'package:fut/feature/tournament/presentation/views/widgets/mini_tournment/mini_tournment.dart';
 import 'package:fut/feature/tournament/presentation/views/widgets/mixed_league_tournment/mixed_league_tournment.dart';
 import 'package:fut/feature/tournament/presentation/views/widgets/mixed_tournment/mixed_tournment_screen.dart';
 
-class MyTournmentScreen extends StatefulWidget {
-  const MyTournmentScreen({super.key});
+class JoinTournmrntScreen extends StatefulWidget {
+  const JoinTournmrntScreen({super.key});
 
   @override
-  State<MyTournmentScreen> createState() => _MyTournmentScreenState();
+  State<JoinTournmrntScreen> createState() => _JoinTournmrntScreenState();
 }
 
 List<String> type = ["knockout", "mixedknockout", "mixedleagua", "league"];
 
-class _MyTournmentScreenState extends State<MyTournmentScreen> {
+class _JoinTournmrntScreenState extends State<JoinTournmrntScreen> {
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
@@ -45,10 +47,6 @@ class _MyTournmentScreenState extends State<MyTournmentScreen> {
                   }
                 },
                 child: Container(
-                  /*  margin: EdgeInsets.symmetric(
-                    horizontal: width * 0.15513,
-                    vertical: 10,
-                  ), */
                   margin: EdgeInsets.symmetric(
                     horizontal: width * 0.06513,
                     vertical: 10,
@@ -191,13 +189,89 @@ class _MyTournmentScreenState extends State<MyTournmentScreen> {
                             : (width * 0.05901) * (2 / 3),
                       ),
                       Container(
-                        width: width * 0.064377,
-                        height: height * 0.13953,
-                        decoration: const BoxDecoration(
-                            shape: BoxShape.circle,
-                            image: DecorationImage(
-                                image:
-                                    AssetImage("assetes/images/team a.png"))),
+                        width: width * 0.04828,
+                        height: height * 0.12860,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15.r),
+                          border: Border.all(
+                            color: SharedColors.whiteColor,
+                          ),
+                        ),
+                        child: Column(
+                          children: [
+                            Expanded(
+                              child: Container(
+                                alignment: Alignment.center,
+                                width: width * 0.04828,
+                                height: height * 0.0604,
+                                decoration: BoxDecoration(
+                                  border: Border.all(
+                                    color: SharedColors.whiteColor,
+                                  ),
+                                  borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(15.r),
+                                    topRight: Radius.circular(15.r),
+                                  ),
+                                ),
+                                child: Text(
+                                  "4",
+                                  style: TextStyle(
+                                      color: SharedColors.whiteColor,
+                                      fontFamily: "TimesNewRoman",
+                                      fontWeight: FontWeight.w700,
+                                      fontSize: getResponsiveFont(context,
+                                          fontSize: 20)),
+                                ),
+                              ),
+                            ),
+                            Expanded(
+                              child: Container(
+                                alignment: Alignment.center,
+                                width: width * 0.04828,
+                                height: height * 0.0604,
+                                decoration: BoxDecoration(
+                                  border: Border.all(
+                                    color: SharedColors.whiteColor,
+                                  ),
+                                  borderRadius: BorderRadius.only(
+                                    bottomLeft: Radius.circular(15.r),
+                                    bottomRight: Radius.circular(15.r),
+                                  ),
+                                ),
+                                child: Text(
+                                  "4",
+                                  style: TextStyle(
+                                      color: SharedColors.whiteColor,
+                                      fontFamily: "TimesNewRoman",
+                                      fontWeight: FontWeight.w700,
+                                      fontSize: getResponsiveFont(context,
+                                          fontSize: 20)),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 40,
+                      ),
+                      Container(
+                        alignment: Alignment.center,
+                        width: width * 0.14592,
+                        height: height * 0.09302,
+                        decoration: BoxDecoration(
+                          color: Colors.green,
+                          borderRadius: BorderRadius.circular(10.r),
+                        ),
+                        child: Text(
+                          "Join",
+                          style: TextStyle(
+                            color: SharedColors.whiteColor,
+                            fontFamily: "poppin",
+                            fontWeight: FontWeight.bold,
+                            fontSize: width * 0.021459,
+                          ),
+                        ),
                       )
                     ],
                   ),

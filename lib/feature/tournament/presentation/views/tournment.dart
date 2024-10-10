@@ -6,7 +6,7 @@ import 'package:fut/core/get_width_height_method.dart';
 import 'package:fut/core/responsive_font.dart';
 import 'package:fut/core/theme/colors.dart';
 import 'package:fut/feature/teams/presentation/views/widgets/create_team.dart';
-import 'package:fut/feature/teams/presentation/views/widgets/othe_teams.dart';
+import 'package:fut/feature/tournament/presentation/views/widgets/join_tournmrnt.dart';
 import 'package:fut/feature/tournament/presentation/views/widgets/my_tournment.dart';
 import 'package:video_player/video_player.dart';
 
@@ -25,7 +25,7 @@ class _TournmentScreenState extends State<TournmentScreen> {
   ];
   List screens = [
     const MyTournmentScreen(),
-    const OtheTeamsScreen(),
+    const JoinTournmrntScreen(),
     const CreateTeam()
   ];
 
@@ -202,8 +202,8 @@ class _TournmentScreenState extends State<TournmentScreen> {
                             const WidgetStatePropertyAll(Colors.transparent),
                         labelStyle: TextStyle(
                             fontFamily: "poppin",
-                            fontSize: width < 950
-                                ? width * 0.0152
+                            fontSize: width < 1000
+                                ? width * 0.0142
                                 : (width * 0.0252) * 0.5,
                             fontWeight: FontWeight.w800),
                         tabs: [
