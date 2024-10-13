@@ -28,11 +28,12 @@ class _HomeScreenState extends State<HomeScreen> {
         forceMaterialTransparency: true,
         backgroundColor: const Color(0xff131313),
         leadingWidth:
-            width < 1000 ? (width * 0.550) : (width * 0.550) * (3 / 4),
+            width < 1000 ? (width * 0.637982) : (width * 0.587982) * 0.9,
         leading: const CustamAppBar(),
+        toolbarHeight: width < 1000 ? height * 0.11395 : height * 0.0813,
         bottom: CustamPreferrsdSizeWidget(
           height:
-              width < 1000 ? height * 0.12604 : (height * 0.18604) * (2 / 3),
+              width < 1000 ? height * 0.10604 : (height * 0.18604) * (2 / 3),
           child: Container(
             margin: EdgeInsets.only(
               left: width * 0.02399,

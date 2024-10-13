@@ -29,25 +29,19 @@ class _PitchesScreensState extends State<PitchesScreens>
     var height = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
+        leadingWidth:
+            width < 1000 ? (width * 0.637982) : (width * 0.587982) * 0.9,
         leading: const CustamAppBar(),
-        leadingWidth: width < 950 ? (width * 0.550) : (width * 0.550) * (3 / 4),
+        toolbarHeight: width < 1000 ? height * 0.11395 : height * 0.0813,
         bottom: AppBar(
-          toolbarHeight: height * 0.1566,
-          centerTitle: true,
-          title: Text(
-            "Pitches",
-            style: TextStyle(
-                color: SharedColors.whiteColor,
-                fontSize: width * 0.0599,
-                fontFamily: "postnobills",
-                fontWeight: FontWeight.w800),
-          ),
+          toolbarHeight:
+              width < 1000 ? height * 0.10504 : (height * 0.15604) * (2 / 3),
           leading: GestureDetector(
             onTap: () {
               Navigator.of(context).pop();
             },
             child: Icon(
-              Icons.arrow_back_ios,
+              Icons.arrow_back,
               color: SharedColors.whiteColor,
               size: width * 0.0299,
             ),

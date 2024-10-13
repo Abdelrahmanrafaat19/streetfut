@@ -11,7 +11,7 @@ class TableMatches extends StatelessWidget {
     var height = MediaQuery.of(context).size.height;
     return Container(
       width: width * 0.48605,
-      height: width < 1000 ? height * 0.6 : height * 0.73,
+      height: width < 1000 ? height * 0.7 : height * 0.73,
       decoration: BoxDecoration(
         color: const Color(0xff3D3F41).withOpacity(0.7),
         borderRadius: BorderRadius.circular(20.r),
@@ -49,7 +49,7 @@ class TableMatches extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: width * 0.013948),
             width: width * 0.48605,
             height: width < 1000
-                ? (height * 0.6) - (height * 0.09302)
+                ? (height * 0.7) - (height * 0.09302)
                 : (height * 0.73) - ((height * 0.09302) * (2 / 3)),
             child: ListView.builder(
               itemCount: 5,

@@ -47,7 +47,7 @@ class _OtheTeamsScreenState extends State<OtheTeamsScreen> {
         ),
         SizedBox(
           width: double.infinity,
-          height: width < 1000 ? height * 0.35 : height * 0.6,
+          height: width < 1000 ? height * 0.45 : height * 0.6,
           child: ListView.builder(
               itemCount: 250,
               itemBuilder: (context, index) => Container(

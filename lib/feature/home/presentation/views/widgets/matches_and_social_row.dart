@@ -181,7 +181,7 @@ class _MatchesAndSocialRowState extends State<MatchesAndSocialRow> {
                                                                 .center,
                                                         children: [
                                                           const SizedBox(
-                                                            height: 30,
+                                                            height: 20,
                                                           ),
                                                           Text(
                                                             "OVR",
@@ -351,7 +351,7 @@ class _MatchesAndSocialRowState extends State<MatchesAndSocialRow> {
                                                                 .start,
                                                         children: [
                                                           const SizedBox(
-                                                            height: 30,
+                                                            height: 20,
                                                           ),
                                                           Text(
                                                             "OVR",

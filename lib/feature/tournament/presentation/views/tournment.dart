@@ -84,7 +84,7 @@ class _TournmentScreenState extends State<TournmentScreen> {
                   pinned: true,
                   // snap: true,
                   floating: false,
-                  leading: const CustamAppBar(),
+
                   actions: [
                     Text(
                       "Sponsored By",
@@ -99,12 +99,16 @@ class _TournmentScreenState extends State<TournmentScreen> {
                       width: width * 0.02399,
                     )
                   ],
-                  leadingWidth:
-                      width < 950 ? (width * 0.550) : (width * 0.550) * (3 / 4),
+                  leadingWidth: width < 1000
+                      ? (width * 0.637982)
+                      : (width * 0.587982) * 0.9,
+                  leading: const CustamAppBar(),
+                  toolbarHeight:
+                      width < 1000 ? height * 0.11395 : height * 0.0813,
                   bottom: CustamPreferrsdSizeWidget(
                     height: width < 1000
-                        ? height * 0.12604
-                        : (height * 0.18604) * (2 / 3),
+                        ? height * 0.10504
+                        : (height * 0.15604) * (2 / 3),
                     child: Container(
                       margin: EdgeInsets.only(
                         left: width * 0.02399,
@@ -129,10 +133,7 @@ class _TournmentScreenState extends State<TournmentScreen> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(
-                                bottom: width > 1000
-                                    ? height * 0.08279
-                                    : (height * 0.08279) / 2),
+                            padding: const EdgeInsets.only(bottom: 10),
                             child: Row(
                               children: [
                                 SvgPicture.asset(

@@ -43,6 +43,9 @@ class CustamAppBar extends StatelessWidget {
                     fit: BoxFit.cover,
                   ),
                 ),
+                SizedBox(
+                  width: width * 0.0021,
+                ),
                 Container(
                   width: width * 0.040,
                   height: height * 0.0898,
@@ -89,6 +92,43 @@ class CustamAppBar extends StatelessWidget {
                 ),
                 SizedBox(
                   width: width * 0.0273,
+                ),
+                Row(
+                  children: [
+                    Container(
+                      width: width * 0.02789,
+                      height: height * 0.06046,
+                      decoration: const BoxDecoration(
+                          image: DecorationImage(
+                              fit: BoxFit.fill,
+                              image: AssetImage(
+                                "assetes/images/wallet.png",
+                              ))),
+                    ),
+                    const SizedBox(
+                      width: 2,
+                    ),
+                    Container(
+                      width: width * 0.064377,
+                      height: height * 0.048837,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        color: SharedColors.whiteColor,
+                        borderRadius: BorderRadius.circular(5.r),
+                      ),
+                      child: Text(
+                        "500EGP",
+                        style: TextStyle(
+                          fontFamily: "poppin",
+                          fontSize: width * 0.013948,
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+                const SizedBox(
+                  width: 10,
                 ),
                 SizedBox(
                   width: width * 0.0874,
@@ -181,6 +221,9 @@ class CustamAppBar extends StatelessWidget {
                     fit: BoxFit.cover,
                   ),
                 ),
+                SizedBox(
+                  width: width * 0.0051,
+                ),
                 Container(
                   width: (width * 0.040),
                   height: height * 0.0898,
@@ -227,6 +270,43 @@ class CustamAppBar extends StatelessWidget {
                 ),
                 SizedBox(
                   width: width * 0.0273,
+                ),
+                Row(
+                  children: [
+                    Container(
+                      width: (width * 0.02789) * (2 / 3),
+                      height: (height * 0.06046) * (2 / 3),
+                      decoration: const BoxDecoration(
+                          image: DecorationImage(
+                              fit: BoxFit.fill,
+                              image: AssetImage(
+                                "assetes/images/wallet.png",
+                              ))),
+                    ),
+                    const SizedBox(
+                      width: 2,
+                    ),
+                    Container(
+                      width: (width * 0.064377),
+                      height: (height * 0.048837) * (2 / 3),
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        color: SharedColors.whiteColor,
+                        borderRadius: BorderRadius.circular(5.r),
+                      ),
+                      child: Text(
+                        "500EGP",
+                        style: TextStyle(
+                          fontFamily: "poppin",
+                          fontSize: width * 0.013948,
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+                SizedBox(
+                  width: (width * 0.0273) * (2 / 3),
                 ),
                 SizedBox(
                   width: width * 0.0874,

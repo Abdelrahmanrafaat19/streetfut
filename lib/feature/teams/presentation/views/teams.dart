@@ -95,11 +95,15 @@ class _TeamsScreenState extends State<TeamsScreen> {
                       width: width * 0.02399,
                     )
                   ],
-                  leadingWidth:
-                      width < 950 ? (width * 0.550) : (width * 0.550) * (3 / 4),
+                  leadingWidth: width < 1000
+                      ? (width * 0.637982)
+                      : (width * 0.587982) * 0.9,
+
+                  toolbarHeight:
+                      width < 1000 ? height * 0.11395 : height * 0.0813,
                   bottom: CustamPreferrsdSizeWidget(
                     height: width < 1000
-                        ? height * 0.12604
+                        ? height * 0.10604
                         : (height * 0.18604) * (2 / 3),
                     child: Container(
                       margin: EdgeInsets.only(
@@ -128,7 +132,7 @@ class _TeamsScreenState extends State<TeamsScreen> {
                             padding: EdgeInsets.only(
                                 bottom: width > 1000
                                     ? height * 0.08279
-                                    : (height * 0.08279) / 2),
+                                    : (height * 0.05279) / 2),
                             child: Row(
                               children: [
                                 SvgPicture.asset(

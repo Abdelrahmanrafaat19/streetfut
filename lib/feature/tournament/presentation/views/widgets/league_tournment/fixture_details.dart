@@ -18,7 +18,7 @@ class _FixtureDetailsScreenState extends State<FixtureDetailsScreen> {
     return Container(
       margin: const EdgeInsets.only(top: 10),
       width: double.infinity,
-      height: width < 1000 ? height * 0.6 : height * 0.73,
+      height: width < 1000 ? height * 0.7 : height * 0.73,
       child: const Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.start,

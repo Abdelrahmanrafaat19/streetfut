@@ -49,7 +49,7 @@ class _TableMixedLeagueScreenState extends State<TableMixedLeagueScreen> {
     var height = MediaQuery.of(context).size.height;
     return SizedBox(
       width: double.infinity,
-      height: width < 1000 ? height * 0.6 : height * 0.73,
+      height: width < 1000 ? height * 0.7 : height * 0.73,
       child: SingleChildScrollView(
         child: Column(
           children: [

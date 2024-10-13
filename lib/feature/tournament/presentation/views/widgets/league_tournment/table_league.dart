@@ -22,7 +22,7 @@ class _TableLeagueScreenState extends State<TableLeagueScreen> {
         horizontal: width * 0.128755,
       ),
       width: double.infinity,
-      height: width < 1000 ? height * 0.6 : height * 0.73,
+      height: width < 1000 ? height * 0.7 : height * 0.73,
       child: SingleChildScrollView(
           child: Table(
         columnWidths: {
