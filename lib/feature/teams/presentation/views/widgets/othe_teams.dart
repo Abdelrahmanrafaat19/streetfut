@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_pannable_rating_bar/flutter_pannable_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:fut/core/component/area_field.dart';
+import 'package:fut/core/component/custam_drop_down_field.dart';
 import 'package:fut/core/responsive_font.dart';
 import 'package:fut/core/theme/colors.dart';
 import 'package:fut/feature/pitches/presentation/views/widgets/search_field.dart';
@@ -52,7 +52,7 @@ class _OtheTeamsScreenState extends State<OtheTeamsScreen> {
               itemCount: 250,
               itemBuilder: (context, index) => Container(
                     margin: EdgeInsets.symmetric(
-                      horizontal: width * 0.23513,
+                      horizontal: width * 0.13513,
                       vertical: 10,
                     ),
                     child: Row(
@@ -73,36 +73,40 @@ class _OtheTeamsScreenState extends State<OtheTeamsScreen> {
                               const SizedBox(
                                 width: 15,
                               ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    "Shabab Sharkawya${index + 1}",
-                                    style: TextStyle(
-                                      fontFamily: "TimesNewRoman",
-                                      fontWeight: FontWeight.w700,
-                                      fontSize: width * 0.0171,
-                                      color: SharedColors.whiteColor,
+                              Expanded(
+                                flex: 2,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Shabab Sharkawya${index + 1}",
+                                      overflow: TextOverflow.clip,
+                                      style: TextStyle(
+                                        fontFamily: "poppin",
+                                        fontWeight: FontWeight.w700,
+                                        fontSize: width * 0.0171,
+                                        color: SharedColors.whiteColor,
+                                      ),
                                     ),
-                                  ),
-                                  PannableRatingBar(
-                                    rate: 5,
-                                    items: List.generate(
-                                        5,
-                                        (index) => RatingWidget(
-                                              selectedColor:
-                                                  SharedColors.greenColor,
-                                              unSelectedColor: Colors.grey,
-                                              child: Icon(
-                                                Icons.star,
-                                                size: width * 0.01809,
-                                              ),
-                                            )),
-                                    onChanged: (value) {
-                                      setState(() {});
-                                    },
-                                  ),
-                                ],
+                                    PannableRatingBar(
+                                      rate: 5,
+                                      items: List.generate(
+                                          5,
+                                          (index) => RatingWidget(
+                                                selectedColor:
+                                                    SharedColors.greenColor,
+                                                unSelectedColor: Colors.grey,
+                                                child: Icon(
+                                                  Icons.star,
+                                                  size: width * 0.01809,
+                                                ),
+                                              )),
+                                      onChanged: (value) {
+                                        setState(() {});
+                                      },
+                                    ),
+                                  ],
+                                ),
                               )
                             ],
                           ),

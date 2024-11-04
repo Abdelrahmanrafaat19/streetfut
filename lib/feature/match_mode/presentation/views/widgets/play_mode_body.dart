@@ -55,8 +55,8 @@ class PlayModeBody extends StatelessWidget {
               ],
               bottom: CustamPreferrsdSizeWidget(
                 height: width < 1000
-                    ? height * 0.10504
-                    : (height * 0.15604) * (2 / 3),
+                    ? height * 0.05604
+                    : (height * 0.18604) * (1 / 4),
                 child: Container(
                   margin: EdgeInsets.only(
                     left: width * 0.02399,
@@ -80,30 +80,24 @@ class PlayModeBody extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Padding(
-                        padding: EdgeInsets.only(
-                            bottom: width > 1000
-                                ? height * 0.08279
-                                : (height * 0.08279) / 2),
-                        child: Row(
-                          children: [
-                            SvgPicture.asset(
-                              "assetes/svg/eand.svg",
-                            ),
-                            const SizedBox(
-                              width: 13,
-                            ),
-                            SvgPicture.asset(
-                              "assetes/svg/pepso.svg",
-                            ),
-                            const SizedBox(
-                              width: 13,
-                            ),
-                            SvgPicture.asset(
-                              "assetes/svg/banko.svg",
-                            )
-                          ],
-                        ),
+                      Row(
+                        children: [
+                          SvgPicture.asset(
+                            "assetes/svg/eand.svg",
+                          ),
+                          const SizedBox(
+                            width: 13,
+                          ),
+                          SvgPicture.asset(
+                            "assetes/svg/pepso.svg",
+                          ),
+                          const SizedBox(
+                            width: 13,
+                          ),
+                          SvgPicture.asset(
+                            "assetes/svg/banko.svg",
+                          )
+                        ],
                       )
                     ],
                   ),
@@ -116,6 +110,9 @@ class PlayModeBody extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    SizedBox(
+                      height: height * 0.06279,
+                    ),
                     Row(
                       children: [
                         const TabsPlayMode(

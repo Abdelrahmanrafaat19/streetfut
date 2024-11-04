@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_pannable_rating_bar/flutter_pannable_rating_bar.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:fut/core/component/area_field.dart';
+import 'package:fut/core/component/custam_drop_down_field.dart';
 import 'package:fut/core/theme/colors.dart';
 import 'package:fut/feature/match_mode/presentation/views/play_mode.dart';
 import 'package:fut/feature/pitches/presentation/views/widgets/search_field.dart';

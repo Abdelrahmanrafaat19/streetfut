@@ -61,6 +61,12 @@ class _TabsPlayModeState extends State<TabsPlayMode> {
               widget.name,
               textAlign: TextAlign.center,
               style: TextStyle(
+                shadows: const [
+                  Shadow(
+                      color: SharedColors.blackColor,
+                      blurRadius: 4,
+                      offset: Offset(0, 4))
+                ],
                 color: SharedColors.whiteColor,
                 fontFamily: "poppin",
                 fontSize: width < 1000 ? width * 0.02145 : (width * 0.02145),

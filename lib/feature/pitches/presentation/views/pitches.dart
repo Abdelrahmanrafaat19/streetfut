@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fut/core/component/area_field.dart';
+import 'package:fut/core/component/custam_drop_down_field.dart';
 import 'package:fut/core/component/custam_app_bar.dart';
 import 'package:fut/core/theme/colors.dart';
 import 'package:fut/feature/pitches/presentation/views/widgets/piches_list.dart';

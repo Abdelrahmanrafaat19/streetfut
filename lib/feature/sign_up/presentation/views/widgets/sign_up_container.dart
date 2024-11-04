@@ -4,7 +4,7 @@ import 'package:fut/core/component/default_button.dart';
 import 'package:fut/core/responsive_font.dart';
 import 'package:fut/core/theme/colors.dart';
 import 'package:fut/feature/login/presentation/views/login.dart';
-import 'package:fut/core/component/area_field.dart';
+import 'package:fut/core/component/custam_drop_down_field.dart';
 import 'package:fut/feature/sign_up/presentation/views/widgets/birthday_field.dart';
 import 'package:fut/feature/sign_up/presentation/views/widgets/email_field.dart';
 import 'package:fut/feature/sign_up/presentation/views/widgets/gender_field.dart';

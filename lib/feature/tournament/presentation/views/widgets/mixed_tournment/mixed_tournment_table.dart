@@ -187,7 +187,10 @@ class _MixedTournmentTableState extends State<MixedTournmentTable> {
                   ),
                 ],
               ),
-            )
+            ),
+            SizedBox(
+              height: height * 0.044186 * 2,
+            ),
           ],
         ),
       ),

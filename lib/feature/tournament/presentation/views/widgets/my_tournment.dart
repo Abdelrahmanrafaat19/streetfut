@@ -12,7 +12,16 @@ class MyTournmentScreen extends StatefulWidget {
   State<MyTournmentScreen> createState() => _MyTournmentScreenState();
 }
 
-List<String> type = ["knockout", "mixedknockout", "mixedleagua", "league"];
+List<String> type = [
+  "knockout",
+  "mixedknockout",
+  "mixedleagua",
+  "league",
+  "mixedleagua",
+  "league",
+  "mixedleagua",
+  "league"
+];
 
 class _MyTournmentScreenState extends State<MyTournmentScreen> {
   @override
@@ -21,7 +30,7 @@ class _MyTournmentScreenState extends State<MyTournmentScreen> {
     var height = MediaQuery.of(context).size.height;
     return SizedBox(
       width: double.infinity,
-      height: width < 1000 ? height * 0.65 : height * 0.73,
+      height: width < 1000 ? height * 0.7 : height * 0.8,
       child: ListView.builder(
           itemCount: type.length,
           itemBuilder: (context, index) => GestureDetector(

@@ -167,7 +167,10 @@ class _TableMixedLeagueScreenState extends State<TableMixedLeagueScreen> {
                   ),
                 ],
               ),
-            )
+            ),
+            SizedBox(
+              height: height * 0.044186 * 2,
+            ),
           ],
         ),
       ),

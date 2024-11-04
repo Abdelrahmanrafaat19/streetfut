@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:fut/core/component/area_field.dart';
+import 'package:fut/core/component/custam_drop_down_field.dart';
 import 'package:fut/core/component/default_button.dart';
 import 'package:fut/core/responsive_font.dart';
 import 'package:fut/core/theme/colors.dart';
@@ -23,7 +23,7 @@ class _CreateTeamState extends State<CreateTeam> {
     var height = MediaQuery.of(context).size.height;
     return Container(
       width: double.infinity,
-      height: width < 1000 ? height * 0.565116 : height * (3 / 4),
+      height: width < 1000 ? height * 0.7 : height * (3 / 4),
       margin: EdgeInsets.symmetric(horizontal: width * 0.042918),
       child: SingleChildScrollView(
         child: Column(

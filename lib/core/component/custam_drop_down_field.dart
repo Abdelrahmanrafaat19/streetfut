@@ -22,7 +22,7 @@ class _CustamDropDwonFieldState extends State<CustamDropDwonField> {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return SizedBox(
-      width: width > 1000 ? width * 0.20386 : (width * 0.20386) * 1.4,
+      width: width > 1000 ? width * 0.20386 * 2 : (width * 0.20386) * 1.4,
       height: width < 1000 ? height * 0.10139 : null,
       child: DropdownButtonFormField<String>(
         hint: Text(

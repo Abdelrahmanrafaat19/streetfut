@@ -103,8 +103,8 @@ class _TeamsScreenState extends State<TeamsScreen> {
                       width < 1000 ? height * 0.11395 : height * 0.0813,
                   bottom: CustamPreferrsdSizeWidget(
                     height: width < 1000
-                        ? height * 0.10604
-                        : (height * 0.18604) * (2 / 3),
+                        ? height * 0.05604
+                        : (height * 0.18604) * (1 / 4),
                     child: Container(
                       margin: EdgeInsets.only(
                         left: width * 0.02399,
@@ -128,30 +128,24 @@ class _TeamsScreenState extends State<TeamsScreen> {
                               ],
                             ),
                           ),
-                          Padding(
-                            padding: EdgeInsets.only(
-                                bottom: width > 1000
-                                    ? height * 0.08279
-                                    : (height * 0.05279) / 2),
-                            child: Row(
-                              children: [
-                                SvgPicture.asset(
-                                  "assetes/svg/eand.svg",
-                                ),
-                                const SizedBox(
-                                  width: 13,
-                                ),
-                                SvgPicture.asset(
-                                  "assetes/svg/pepso.svg",
-                                ),
-                                const SizedBox(
-                                  width: 13,
-                                ),
-                                SvgPicture.asset(
-                                  "assetes/svg/banko.svg",
-                                )
-                              ],
-                            ),
+                          Row(
+                            children: [
+                              SvgPicture.asset(
+                                "assetes/svg/eand.svg",
+                              ),
+                              const SizedBox(
+                                width: 13,
+                              ),
+                              SvgPicture.asset(
+                                "assetes/svg/pepso.svg",
+                              ),
+                              const SizedBox(
+                                width: 13,
+                              ),
+                              SvgPicture.asset(
+                                "assetes/svg/banko.svg",
+                              )
+                            ],
                           )
                         ],
                       ),

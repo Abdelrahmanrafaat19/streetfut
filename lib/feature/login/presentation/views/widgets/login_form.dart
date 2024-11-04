@@ -141,7 +141,7 @@ class _LoginFormState extends State<LoginForm> {
               textcolor: SharedColors.whiteColor,
               fontSize: getResponsiveFont(context, fontSize: 25),
               raduis: 10.r),
-        )
+        ),
       ],
     );
   }

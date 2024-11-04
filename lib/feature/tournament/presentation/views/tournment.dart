@@ -5,10 +5,11 @@ import 'package:fut/core/component/custam_app_bar.dart';
 import 'package:fut/core/get_width_height_method.dart';
 import 'package:fut/core/responsive_font.dart';
 import 'package:fut/core/theme/colors.dart';
-import 'package:fut/feature/teams/presentation/views/widgets/create_team.dart';
 import 'package:fut/feature/tournament/presentation/views/widgets/join_tournmrnt.dart';
 import 'package:fut/feature/tournament/presentation/views/widgets/my_tournment.dart';
 import 'package:video_player/video_player.dart';
+
+import 'widgets/request_tournment.dart';
 
 class TournmentScreen extends StatefulWidget {
   const TournmentScreen({super.key});
@@ -26,7 +27,7 @@ class _TournmentScreenState extends State<TournmentScreen> {
   List screens = [
     const MyTournmentScreen(),
     const JoinTournmrntScreen(),
-    const CreateTeam()
+    const RequestTournment()
   ];
 
   int index = 0;
@@ -49,7 +50,7 @@ class _TournmentScreenState extends State<TournmentScreen> {
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
-    debugPrint(width.toString());
+    debugPrint("this Width and Height $width     $height");
     return DefaultTabController(
       length: 3,
       child: Scaffold(
@@ -107,8 +108,8 @@ class _TournmentScreenState extends State<TournmentScreen> {
                       width < 1000 ? height * 0.11395 : height * 0.0813,
                   bottom: CustamPreferrsdSizeWidget(
                     height: width < 1000
-                        ? height * 0.10504
-                        : (height * 0.15604) * (2 / 3),
+                        ? height * 0.08604
+                        : (height * 0.18604) * (1 / 4),
                     child: Container(
                       margin: EdgeInsets.only(
                         left: width * 0.02399,
