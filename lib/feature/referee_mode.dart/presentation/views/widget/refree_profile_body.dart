@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fut/core/component/titel_container.dart';
 import 'package:fut/core/theme/colors.dart';
+import 'package:fut/feature/referee_mode.dart/presentation/views/widget/ready_switch.dart';
 import 'package:fut/feature/referee_mode.dart/presentation/views/widget/refree_name_image_profile.dart';
 
 class RefreeProfileBody extends StatelessWidget {
@@ -39,19 +40,75 @@ class RefreeProfileBody extends StatelessWidget {
                         ? (height * 0.362791) - 51.h
                         : ((height * 0.362791) * (2 / 3)) - 51.h,
                     alignment: Alignment.center,
-                    padding: EdgeInsets.symmetric(horizontal: width * 0.048283),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
-                        Row(
-                          children: [
-                            SvgPicture.asset(
-                              "assetes/svg/edit.svg",
-                              color: SharedColors.whiteColor,
-                            ),
-                          ],
+                        const SizedBox(
+                          height: 10,
                         ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10),
+                          child: SvgPicture.asset(
+                            "assetes/svg/edit.svg",
+                            color: SharedColors.whiteColor,
+                          ),
+                        ),
+                        SizedBox(height: height * 0.0395348),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const CustomSwitch(),
+                            SizedBox(
+                              width: width * 0.012875,
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(top: 10.h, bottom: 10.h),
+                              width: 1,
+                              decoration: const BoxDecoration(
+                                  color: SharedColors.whiteColor),
+                            ),
+                            SizedBox(
+                              width: width * 0.124463,
+                              height: width < 1000
+                                  ? height * 0.0844186
+                                  : height * 0.0644186,
+                              child: TextField(
+                                style: TextStyle(
+                                  color: SharedColors.blackColor,
+                                  fontWeight: FontWeight.w600,
+                                  fontFamily: "poppin",
+                                  fontSize: width * 0.01609,
+                                ),
+                                textAlign: TextAlign.center,
+                                cursorColor: SharedColors.blackColor,
+                                cursorHeight: height * 0.0344186,
+                                decoration: InputDecoration(
+                                  contentPadding: const EdgeInsets.all(10),
+                                  enabledBorder: OutlineInputBorder(
+                                    borderSide: const BorderSide(
+                                      color: SharedColors.whiteColor,
+                                    ),
+                                    borderRadius: BorderRadius.circular(25.r),
+                                  ),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderSide: const BorderSide(
+                                      color: SharedColors.whiteColor,
+                                    ),
+                                    borderRadius: BorderRadius.circular(25.r),
+                                  ),
+                                  border: OutlineInputBorder(
+                                    borderSide: const BorderSide(
+                                      color: SharedColors.whiteColor,
+                                    ),
+                                    borderRadius: BorderRadius.circular(25.r),
+                                  ),
+                                  filled: true,
+                                  fillColor: SharedColors.whiteColor,
+                                ),
+                              ),
+                            )
+                          ],
+                        )
                       ],
                     ),
                   )

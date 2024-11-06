@@ -6,7 +6,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fut/core/storage.dart';
 import 'package:fut/feature/layout/translation/localization_cubit.dart';
 import 'package:fut/feature/layout/translation/localization_state.dart';
-import 'package:fut/feature/referee_mode.dart/presentation/views/referee_mode.dart';
 import 'package:fut/feature/referee_mode.dart/presentation/views/refree_profile.dart';
 import 'package:fut/generated/l10n.dart';
 
