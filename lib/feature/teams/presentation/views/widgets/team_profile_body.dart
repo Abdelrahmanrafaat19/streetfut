@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
-
 import 'package:fut/core/theme/colors.dart';
 import 'package:fut/feature/teams/presentation/views/widgets/buttons_row.dart';
-import 'package:fut/feature/teams/presentation/views/widgets/columns_team_info_team_profile.dart';
 import 'package:fut/feature/teams/presentation/views/widgets/name_of_team.dart';
 import 'package:fut/feature/teams/presentation/views/widgets/statistics_container.dart';
 import 'package:fut/feature/teams/presentation/views/widgets/team_info_container.dart';
-import 'package:fut/feature/teams/presentation/views/widgets/titel_container.dart';
+import 'package:fut/feature/teams/presentation/views/widgets/team_squad_container.dart';
+import 'package:fut/core/component/titel_container.dart';
 
 class TeamProfileBody extends StatefulWidget {
   const TeamProfileBody({super.key});
@@ -45,6 +43,12 @@ class _TeamProfileBodyState extends State<TeamProfileBody> {
                         : (height * 0.041860) * (2 / 3),
                   ),
                   const TeamInfoContainer(),
+                  SizedBox(
+                    height: width < 1000
+                        ? height * 0.041860
+                        : (height * 0.041860) * (2 / 3),
+                  ),
+                  const TeamSquadContainer(),
                   SizedBox(
                     height: width < 1000
                         ? height * 0.041860

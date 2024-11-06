@@ -44,8 +44,10 @@ dependencies:
   device_preview: ^1.2.0
   carousel_slider: ^5.0.0
   syncfusion_flutter_sliders: ^27.1.50
-  video_player: ^2.9.1
   gradient_borders: ^1.0.1
+  video_player: ^2.9.2
+  youtube_player_flutter: ^9.1.1
+ 
 
 dev_dependencies:
   flutter_lints: ^4.0.0

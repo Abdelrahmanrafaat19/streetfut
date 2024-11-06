@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fut/core/theme/colors.dart';
 import 'package:fut/feature/teams/presentation/views/widgets/columns_team_info_team_profile.dart';
-import 'package:fut/feature/teams/presentation/views/widgets/titel_container.dart';
+import 'package:fut/core/component/titel_container.dart';
 
 class StatisticsContainer extends StatelessWidget {
   const StatisticsContainer({super.key});
@@ -50,7 +50,7 @@ class StatisticsContainer extends StatelessWidget {
                 ),
                 const ColumnsTeamInfoTeamProfile(
                   title: "20",
-                  path: "assetes/svg/web.svg",
+                  path: "assetes/svg/fi.svg",
                   area: "Scored Goals",
                 ),
                 SizedBox(

@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fut/core/theme/colors.dart';
 import 'package:fut/feature/teams/presentation/views/widgets/columns_team_info_team_profile.dart';
-import 'package:fut/feature/teams/presentation/views/widgets/titel_container.dart';
+import 'package:fut/core/component/titel_container.dart';
 
 class TeamInfoContainer extends StatelessWidget {
   const TeamInfoContainer({super.key});
@@ -43,24 +43,61 @@ class TeamInfoContainer extends StatelessWidget {
                 ),
                 Container(
                   margin: EdgeInsets.only(top: 10.h, bottom: 10.h),
-                  width: 2.9,
+                  width: 1,
                   decoration:
                       const BoxDecoration(color: SharedColors.whiteColor),
                 ),
                 SizedBox(
                   width: width * 0.038283,
                 ),
-                const ColumnsTeamInfoTeamProfile(
-                  title: "27",
-                  path: "assetes/svg/age.svg",
-                  area: "Average Ages",
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Container(
+                      width: width * 0.030386,
+                      height: height * 0.065813,
+                      decoration: const BoxDecoration(
+                        color: SharedColors.greenColor,
+                        shape: BoxShape.circle,
+                      ),
+                      alignment: Alignment.center,
+                      child: Text(
+                        "age",
+                        style: TextStyle(
+                            color: SharedColors.whiteColor,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: "poppin",
+                            fontSize: width * 0.01072),
+                      ),
+                    ),
+                    Text(
+                      "27",
+                      style: TextStyle(
+                          fontFamily: "poppin",
+                          fontSize: width < 1000
+                              ? width * 0.016094
+                              : (width * 0.016094) * 0.75,
+                          color: SharedColors.whiteColor,
+                          fontWeight: FontWeight.w600),
+                    ),
+                    Text(
+                      "Averages",
+                      style: TextStyle(
+                          fontFamily: "poppin",
+                          fontSize: width < 1000
+                              ? width * 0.016094
+                              : (width * 0.016094) * 0.75,
+                          color: SharedColors.whiteColor,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ],
                 ),
                 SizedBox(
                   width: width * 0.038283,
                 ),
                 Container(
                   margin: EdgeInsets.only(top: 10.h, bottom: 10.h),
-                  width: 2.9,
+                  width: 1,
                   decoration:
                       const BoxDecoration(color: SharedColors.whiteColor),
                 ),
