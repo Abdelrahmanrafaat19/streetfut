@@ -64,9 +64,9 @@ class _RequestTournmentState extends State<RequestTournment> {
                     ),
                   ),
                 ),
-                const CustamDropDwonField(
+                CustamDropDwonField(
                   text: "Type",
-                  data: ["knockOut", "Mixed"],
+                  data: const ["knockOut", "Mixed"],
                 )
               ],
             ),
@@ -86,9 +86,9 @@ class _RequestTournmentState extends State<RequestTournment> {
                     ),
                   ),
                 ),
-                const CustamDropDwonField(
+                CustamDropDwonField(
                   text: "Area",
-                  data: ["NasrCity", "NewCairo"],
+                  data: const ["NasrCity", "NewCairo"],
                 )
               ],
             ),

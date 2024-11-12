@@ -39,7 +39,8 @@ class _TeamProfileScreenState extends State<TeamProfileScreen> {
               slivers: [
                 SliverAppBar(
                   backgroundColor: Colors.transparent,
-                  forceElevated: true,
+                  // forceElevated: true,
+
                   // stretch: true,
                   pinned: true,
                   // snap: true,

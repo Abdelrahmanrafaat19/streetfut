@@ -97,9 +97,9 @@ class _SignUpContainerState extends State<SignUpContainer> {
               height:
                   width < 1000 ? height * 0.0388 : (height * 0.0388) * (2 / 3),
             ),
-            const CustamDropDwonField(
+            CustamDropDwonField(
               text: 'Area',
-              data: ["Naser_City", "New_Cairo"],
+              data: const ["Naser_City", "New_Cairo"],
             ),
             SizedBox(
               height:

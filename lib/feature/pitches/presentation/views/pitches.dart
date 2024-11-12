@@ -67,23 +67,23 @@ class _PitchesScreensState extends State<PitchesScreens>
                   child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const CustamDropDwonField(
+                  CustamDropDwonField(
                     text: "Choose Area",
-                    data: ["Naser_City", "New_Cairo"],
+                    data: const ["Naser_City", "New_Cairo"],
                   ),
                   SizedBox(
                     width: width * 0.04399,
                   ),
-                  const CustamDropDwonField(
+                  CustamDropDwonField(
                     text: "Choose Time",
-                    data: ["100.0", "250.5"],
+                    data: const ["100.0", "250.5"],
                   ),
                   SizedBox(
                     width: width * 0.04399,
                   ),
-                  const CustamDropDwonField(
+                  CustamDropDwonField(
                     text: "Choose Price",
-                    data: ["100.0", "250.5"],
+                    data: const ["100.0", "250.5"],
                   ),
                 ],
               )),

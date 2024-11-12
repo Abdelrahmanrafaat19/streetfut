@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fut/core/theme/colors.dart';
-import 'package:fut/feature/teams/presentation/views/widgets/columns_team_info_team_profile.dart';
+import 'package:fut/core/component/columns_team_info_team_profile.dart';
 import 'package:fut/core/component/titel_container.dart';
 
 class TeamInfoContainer extends StatelessWidget {
@@ -16,7 +16,7 @@ class TeamInfoContainer extends StatelessWidget {
       width: width < 1000 ? width * 0.643776 : width * 0.543776,
       height: width < 1000 ? height * 0.362791 : (height * 0.362791) * (2 / 3),
       decoration: BoxDecoration(
-          color: SharedColors.greyBoldColor,
+          color: SharedColors.blackColor.withOpacity(0.7),
           borderRadius: BorderRadius.circular(20.r)),
       child: Column(
         children: [

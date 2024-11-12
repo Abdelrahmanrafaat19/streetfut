@@ -47,6 +47,7 @@ dependencies:
   gradient_borders: ^1.0.1
   video_player: ^2.9.2
   youtube_player_flutter: ^9.1.1
+  responsive_grid: ^2.4.4
  
 
 dev_dependencies:

@@ -32,7 +32,7 @@ class RefereeModeScreen extends StatelessWidget {
             slivers: [
               SliverAppBar(
                 backgroundColor: Colors.transparent,
-                forceElevated: true,
+                forceElevated: false,
                 // stretch: true,
                 pinned: true,
                 // snap: true,

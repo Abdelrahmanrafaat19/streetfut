@@ -20,6 +20,7 @@ class _RefreeProfileState extends State<RefreeProfile> {
     var height = MediaQuery.of(context).size.height;
     return Scaffold(
         body: Container(
+      alignment: Alignment.center,
       decoration: const BoxDecoration(),
       child: Stack(
         children: [
@@ -27,7 +28,9 @@ class _RefreeProfileState extends State<RefreeProfile> {
             child: SizedBox.expand(
               child: FittedBox(
                 fit: BoxFit.fill,
-                child: Image.asset("assetes/images/refbackground.png"),
+                child: Opacity(
+                    opacity: 0.5,
+                    child: Image.asset("assetes/images/referee_mood.png")),
               ),
             ),
           ),
@@ -37,7 +40,7 @@ class _RefreeProfileState extends State<RefreeProfile> {
             slivers: [
               SliverAppBar(
                 backgroundColor: Colors.transparent,
-                forceElevated: true,
+                forceElevated: false,
                 // stretch: true,
                 pinned: true,
                 // snap: true,

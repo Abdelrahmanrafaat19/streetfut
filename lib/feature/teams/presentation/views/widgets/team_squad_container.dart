@@ -73,7 +73,7 @@ class _TeamSquadContainerState extends State<TeamSquadContainer> {
       width: width * 0.45922,
       // height: width < 1000 ? (height * 0.4488) : (height * 0.4488) * 0.9,
       decoration: BoxDecoration(
-        color: const Color(0xff3D3F41).withOpacity(0.7),
+        color: SharedColors.blackColor.withOpacity(0.7),
         borderRadius: BorderRadius.circular(20.r),
       ),
       child: SingleChildScrollView(

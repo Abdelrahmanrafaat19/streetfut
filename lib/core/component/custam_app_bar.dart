@@ -164,7 +164,6 @@ class CustamAppBar extends StatelessWidget {
                         width: width * 0.04371,
                         height: height * 0.0728,
                         fit: BoxFit.cover,
-                        color: const Color(0xffF07B0F),
                       ),
                     ],
                   ),
