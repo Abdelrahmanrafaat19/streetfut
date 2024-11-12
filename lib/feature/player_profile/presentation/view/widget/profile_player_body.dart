@@ -18,6 +18,7 @@ class ProfilePlayerBody extends StatelessWidget {
       height: width < 1000 ? height * 0.8 : height * 0.87,
       // margin: EdgeInsets.symmetric(horizontal: width * 0.042918),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           SizedBox(
             width: width < 1000 ? width * 0.633047 : width * 0.643776,
