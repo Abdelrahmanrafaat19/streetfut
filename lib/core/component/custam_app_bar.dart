@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fut/core/responsive_font.dart';
 import 'package:fut/core/theme/colors.dart';
+import 'package:fut/feature/player_profile/presentation/view/profile_player_screen.dart';
 
 class CustamAppBar extends StatelessWidget {
   const CustamAppBar({super.key});
@@ -17,7 +18,7 @@ class CustamAppBar extends StatelessWidget {
         if (width < 1000) {
           return Container(
             width: width * 0.5858,
-            height: height * 0.0813,
+            height: height * 0.081395,
             decoration: BoxDecoration(
               gradient: const LinearGradient(
                 colors: [
@@ -46,17 +47,24 @@ class CustamAppBar extends StatelessWidget {
                 SizedBox(
                   width: width * 0.0021,
                 ),
-                Container(
-                  width: width * 0.040,
-                  height: height * 0.0898,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      fit: BoxFit.fill,
-                      image: Image.network(
-                        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfXaFI4hRuZSgD2_HsaWiXV_CftY6S8Kas5Q&s',
-                      ).image,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const ProfilePlayerScreen(),
+                    ));
+                  },
+                  child: Container(
+                    width: width * 0.040,
+                    height: height * 0.0898,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        fit: BoxFit.fill,
+                        image: Image.network(
+                          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfXaFI4hRuZSgD2_HsaWiXV_CftY6S8Kas5Q&s',
+                        ).image,
+                      ),
+                      shape: BoxShape.circle,
                     ),
-                    shape: BoxShape.circle,
                   ),
                 ),
                 SizedBox(
@@ -194,7 +202,7 @@ class CustamAppBar extends StatelessWidget {
         } else {
           return Container(
             width: width * 0.5858,
-            height: height * 0.11860,
+            height: height * 0.081395,
             decoration: BoxDecoration(
               gradient: const LinearGradient(
                 colors: [

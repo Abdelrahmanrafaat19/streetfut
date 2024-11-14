@@ -21,7 +21,7 @@ class _EarningPointsBodyState extends State<EarningPointsBody> {
     var height = MediaQuery.of(context).size.height;
     return Container(
       width: double.infinity,
-      height: width < 1000 ? height * 0.8 : height * 0.87,
+      height: width < 1000 ? height * 0.85 : height * 0.87,
       margin: EdgeInsets.symmetric(horizontal: width * 0.022918),
       child: SingleChildScrollView(
         child: Column(
@@ -132,7 +132,7 @@ class _EarningPointsBodyState extends State<EarningPointsBody> {
                                       ? height * 0.05813
                                       : (height * 0.05813) * (3 / 4),
                                   fit: BoxFit.cover,
-                                  color: const Color(0xffF07B0F),
+                                  // color: const Color(0xffF07B0F),
                                 ),
                               ],
                             ),

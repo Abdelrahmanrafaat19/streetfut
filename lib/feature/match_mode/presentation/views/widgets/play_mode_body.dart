@@ -38,7 +38,7 @@ class PlayModeBody extends StatelessWidget {
               leadingWidth:
                   width < 1000 ? (width * 0.637982) : (width * 0.587982) * 0.9,
               leading: const CustamAppBar(),
-              toolbarHeight: width < 1000 ? height * 0.11395 : height * 0.0813,
+              toolbarHeight: width < 1000 ? height * 0.081395 : height * 0.0813,
               actions: [
                 Text(
                   "Sponsored By",

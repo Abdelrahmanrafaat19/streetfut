@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fut/core/theme/colors.dart';
+import 'package:fut/feature/earning_points/presentation/views/earning_points_screen.dart';
 import 'package:fut/feature/home/presentation/views/widgets/drawer_contain.dart';
 import 'package:fut/feature/login/presentation/views/login.dart';
 import 'package:fut/feature/match_mode/presentation/views/play_mode.dart';
@@ -100,7 +101,11 @@ class _DrawerHomeState extends State<DrawerHome> {
               DrawerContain(
                 imagePath: "assetes/images/pointdrawer.png",
                 text: "Points Earned",
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const EarningPointsScreen(),
+                  ));
+                },
               ),
               const Divider(
                 color: Color(0xff696969),
