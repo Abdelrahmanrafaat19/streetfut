@@ -65,7 +65,7 @@ class _TeamProfileScreenState extends State<TeamProfileScreen> {
                       : (width * 0.587982) * 0.9,
 
                   toolbarHeight:
-                      width < 1000 ? height * 0.11395 : height * 0.0813,
+                      width < 1000 ? height * 0.081395 : height * 0.0813,
                   bottom: CustamPreferrsdSizeWidget(
                     height: width < 1000
                         ? height * 0.05604

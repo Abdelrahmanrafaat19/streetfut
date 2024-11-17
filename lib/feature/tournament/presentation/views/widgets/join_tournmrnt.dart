@@ -34,7 +34,7 @@ class _JoinTournmrntScreenState extends State<JoinTournmrntScreen> {
     var height = MediaQuery.of(context).size.height;
     return SizedBox(
       width: double.infinity,
-      height: width < 1000 ? height * 0.7 : height * 0.8,
+      height: width < 1000 ? height * 0.75 : height * 0.8,
       child: ListView.builder(
           itemCount: type.length,
           itemBuilder: (context, index) => GestureDetector(

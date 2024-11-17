@@ -27,7 +27,7 @@ class _RequestTournmentState extends State<RequestTournment> {
         vertical: 10,
       ),
       width: double.infinity,
-      height: width < 1000 ? height * 0.7 : height * 0.8,
+      height: width < 1000 ? height * 0.75 : height * 0.8,
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,

@@ -101,7 +101,7 @@ class _LeagueTournmentScreenState extends State<LeagueTournmentScreen> {
                       : (width * 0.587982) * 0.9,
                   leading: const CustamAppBar(),
                   toolbarHeight:
-                      width < 1000 ? height * 0.11395 : height * 0.0813,
+                      width < 1000 ? height * 0.081395 : height * 0.0813,
                   bottom: CustamPreferrsdSizeWidget(
                     height: width < 1000
                         ? height * 0.10604
