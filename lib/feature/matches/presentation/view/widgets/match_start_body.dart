@@ -18,10 +18,9 @@ class _MatchStartBodyState extends State<MatchStartBody> {
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
-    return Container(
+    return SizedBox(
       width: double.infinity,
-      height: width < 1000 ? height * 0.8 : height * 0.87,
-      margin: EdgeInsets.symmetric(horizontal: width * 0.042918),
+      height: width < 1000 ? height * 0.85 : height * 0.87,
       child: SingleChildScrollView(
         child: Column(
           children: [

@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fut/core/component/default_button.dart';
 import 'package:fut/core/responsive_font.dart';
 import 'package:fut/core/theme/colors.dart';
+import 'package:fut/feature/matches/presentation/view/matches_ended_screen.dart';
 
 class EndMatchDialog extends StatelessWidget {
   const EndMatchDialog({super.key});
@@ -74,7 +75,9 @@ class EndMatchDialog extends StatelessWidget {
                       : (height * 0.076744) * (0.7),
                   child: defaultButton(
                       onTap: () {
-                        Navigator.of(context).pop();
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => const MatchesEndedScreen(),
+                        ));
                       },
                       text: "End Match",
                       color: SharedColors.blackColor,

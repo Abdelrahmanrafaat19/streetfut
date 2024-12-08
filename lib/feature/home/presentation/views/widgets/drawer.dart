@@ -6,6 +6,7 @@ import 'package:fut/feature/home/presentation/views/widgets/drawer_contain.dart'
 import 'package:fut/feature/login/presentation/views/login.dart';
 import 'package:fut/feature/match_mode/presentation/views/play_mode.dart';
 import 'package:fut/feature/pitches/presentation/views/pitches.dart';
+import 'package:fut/feature/referee_mode.dart/presentation/views/refree_profile.dart';
 import 'package:fut/feature/teams/presentation/views/teams.dart';
 import 'package:fut/feature/tournament/presentation/views/tournment.dart';
 
@@ -125,7 +126,11 @@ class _DrawerHomeState extends State<DrawerHome> {
               DrawerContain(
                 imagePath: "assetes/images/refdrawer.png",
                 text: "Referee Mode",
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const RefreeProfile(),
+                  ));
+                },
               ),
               const Divider(
                 color: Color(0xff696969),

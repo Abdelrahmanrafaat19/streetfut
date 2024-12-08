@@ -196,7 +196,7 @@ class _RefreeStartMatchBodyState extends State<RefreeStartMatchBody> {
                     CustamDropDwonField(
                       text: "Team",
                       data: const ["Team A", "Team B"],
-                      width: width * 0.10193,
+                      width: width * 0.12193,
                       height: height * 0.069767,
                       backGroundColor: SharedColors.whiteColor,
                       textColor: SharedColors.blackColor,

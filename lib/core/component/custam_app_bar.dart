@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fut/core/responsive_font.dart';
 import 'package:fut/core/theme/colors.dart';
+import 'package:fut/feature/notification/presentation/views/notification_screen.dart';
 import 'package:fut/feature/player_profile/presentation/view/profile_player_screen.dart';
 
 class CustamAppBar extends StatelessWidget {
@@ -189,12 +190,19 @@ class CustamAppBar extends StatelessWidget {
                 SizedBox(
                   width: width * 0.02732,
                 ),
-                SvgPicture.asset(
-                  'assetes/svg/Notification.svg',
-                  width: width * 0.04371,
-                  height: height * 0.0728,
-                  fit: BoxFit.cover,
-                  color: const Color(0xffF07B0F),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const NotificationScreen(),
+                    ));
+                  },
+                  child: SvgPicture.asset(
+                    'assetes/svg/Notification.svg',
+                    width: width * 0.04371,
+                    height: height * 0.0728,
+                    fit: BoxFit.cover,
+                    color: const Color(0xffF07B0F),
+                  ),
                 ),
               ],
             ),

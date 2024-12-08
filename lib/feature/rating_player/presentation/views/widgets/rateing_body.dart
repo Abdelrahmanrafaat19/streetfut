@@ -30,7 +30,7 @@ class _RateingBodyState extends State<RateingBody> {
     var height = MediaQuery.of(context).size.height;
     return Container(
       width: double.infinity,
-      height: width < 1000 ? height * 0.8 : height * 0.87,
+      height: width < 1000 ? height * 0.85 : height * 0.87,
       margin: EdgeInsets.symmetric(horizontal: width * 0.042918),
       child: SingleChildScrollView(
         child: Column(

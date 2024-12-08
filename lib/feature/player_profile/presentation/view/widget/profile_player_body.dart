@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:fut/feature/player_profile/presentation/view/widget/achievements.dart';
 import 'package:fut/feature/player_profile/presentation/view/widget/joined_team.dart';
 import 'package:fut/feature/player_profile/presentation/view/widget/name_of_player.dart';
 import 'package:fut/feature/player_profile/presentation/view/widget/personal_info_container.dart';
@@ -15,7 +16,7 @@ class ProfilePlayerBody extends StatelessWidget {
     var height = MediaQuery.of(context).size.height;
     return SizedBox(
       width: double.infinity,
-      height: width < 1000 ? height * 0.8 : height * 0.87,
+      height: width < 1000 ? height * 0.85 : height * 0.87,
       // margin: EdgeInsets.symmetric(horizontal: width * 0.042918),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -35,7 +36,11 @@ class ProfilePlayerBody extends StatelessWidget {
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [StatisticsPlayerProfile(), JoinedTeam()],
-                )
+                ),
+                SizedBox(
+                  height: 20.h,
+                ),
+                const AchievementsPlayer()
               ],
             ),
           ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fut/core/theme/colors.dart';
 import 'package:fut/feature/matches/presentation/view/widgets/man_of_match_container.dart';
+import 'package:fut/feature/rating_player/presentation/views/rating_player.dart';
 
 class MatchesResultColumn extends StatelessWidget {
   const MatchesResultColumn({super.key});
@@ -66,7 +67,14 @@ class MatchesResultColumn extends StatelessWidget {
             ),
           ],
         ),
-        const ManOfMatchContainer()
+        GestureDetector(
+          child: const ManOfMatchContainer(),
+          onTap: () {
+            Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => const RatingPlayer(),
+            ));
+          },
+        )
       ],
     );
   }

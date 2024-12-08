@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fut/core/theme/colors.dart';
+import 'package:fut/feature/matches/presentation/view/matches_start_screen.dart';
 import 'package:fut/feature/notification/presentation/views/widgets/button_row.dart';
+import 'package:fut/feature/referee_mode.dart/presentation/views/refree_start_match.dart';
 import 'package:gradient_borders/gradient_borders.dart';
 
 class NotificationBody extends StatefulWidget {
@@ -92,14 +94,23 @@ class _NotificationBodyState extends State<NotificationBody> {
                   index == 0
                       ? ButtonRow(
                           acceptedText: "Approve",
-                          acceptedMethod: () {},
+                          acceptedMethod: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => const RefreeStartMatch(),
+                            ));
+                          },
                           unAcceptedText: "Decline",
                           unAcceptedMethod: () {},
                         )
                       : index == 1
                           ? ButtonRow(
                               acceptedText: "Ready",
-                              acceptedMethod: () {},
+                              acceptedMethod: () {
+                                Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) =>
+                                      const MatchesStartScreen(),
+                                ));
+                              },
                               unAcceptedText: "UnReady",
                               unAcceptedMethod: () {},
                             )
