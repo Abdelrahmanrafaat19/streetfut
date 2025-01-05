@@ -4,7 +4,6 @@ import 'package:fut/feature/player_profile/presentation/view/widget/achievements
 import 'package:fut/feature/player_profile/presentation/view/widget/joined_team.dart';
 import 'package:fut/feature/player_profile/presentation/view/widget/name_of_player.dart';
 import 'package:fut/feature/player_profile/presentation/view/widget/personal_info_container.dart';
-import 'package:fut/feature/player_profile/presentation/view/widget/player_card.dart';
 import 'package:fut/feature/player_profile/presentation/view/widget/statistics_player_profile.dart';
 
 class ProfilePlayerBody extends StatelessWidget {
