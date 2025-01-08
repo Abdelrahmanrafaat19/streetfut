@@ -9,6 +9,7 @@ import 'package:fut/feature/tournament/presentation/views/widgets/join_tournmrnt
 import 'package:fut/feature/tournament/presentation/views/widgets/my_tournment.dart';
 import 'package:video_player/video_player.dart';
 
+import '../../../../generated/l10n.dart';
 import 'widgets/request_tournment.dart';
 
 class TournmentScreen extends StatefulWidget {
@@ -19,11 +20,6 @@ class TournmentScreen extends StatefulWidget {
 }
 
 class _TournmentScreenState extends State<TournmentScreen> {
-  List<String> teamsType = [
-    "My Tournaments",
-    "Join Tournaments",
-    "Request Tournament"
-  ];
   List screens = [
     const MyTournmentScreen(),
     const JoinTournmrntScreen(),
@@ -48,6 +44,11 @@ class _TournmentScreenState extends State<TournmentScreen> {
 
   @override
   Widget build(BuildContext context) {
+    List<String> teamsType = [
+      S.of(context).mytournment,
+      S.of(context).jointournment,
+      S.of(context).requesttournment
+    ];
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
     debugPrint("this Width and Height $width     $height");
@@ -88,7 +89,7 @@ class _TournmentScreenState extends State<TournmentScreen> {
 
                   actions: [
                     Text(
-                      "Sponsored By",
+                      S.of(context).sponsoredby,
                       style: TextStyle(
                         color: SharedColors.whiteColor,
                         fontFamily: "poppin",

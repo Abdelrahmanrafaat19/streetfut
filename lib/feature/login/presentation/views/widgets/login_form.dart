@@ -6,6 +6,8 @@ import 'package:fut/core/theme/colors.dart';
 import 'package:fut/feature/home/presentation/views/home_screen.dart';
 import 'package:fut/feature/login/presentation/views/widgets/sign_up_row.dart';
 
+import '../../../../../generated/l10n.dart';
+
 class LoginForm extends StatefulWidget {
   final void Function()? onTap;
   final bool scure;
@@ -51,7 +53,7 @@ class _LoginFormState extends State<LoginForm> {
                 borderSide: BorderSide.none,
                 borderRadius: BorderRadius.circular(10),
               ),
-              hintText: "Email / Phone Number",
+              hintText: S.of(context).emailandphone,
               hintStyle: TextStyle(
                   color: SharedColors.greenColor,
                   fontSize: getResponsiveFont(context, fontSize: 15),
@@ -102,7 +104,7 @@ class _LoginFormState extends State<LoginForm> {
                 color: SharedColors.greenColor,
                 size: getResponsiveFont(context, fontSize: 20),
               ),
-              hintText: "Password",
+              hintText: S.of(context).password,
               hintStyle: TextStyle(
                 color: SharedColors.greenColor,
                 fontSize: getResponsiveFont(context, fontSize: 15),
@@ -130,7 +132,7 @@ class _LoginFormState extends State<LoginForm> {
                   ),
                 );
               },
-              text: "let's Play",
+              text: S.of(context).letsplay,
               gradient: const LinearGradient(colors: [
                 Color(0xff9A8E14),
                 Color(0xff95A324),

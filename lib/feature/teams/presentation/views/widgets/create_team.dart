@@ -6,6 +6,7 @@ import 'package:fut/core/component/default_button.dart';
 import 'package:fut/core/responsive_font.dart';
 import 'package:fut/core/theme/colors.dart';
 import 'package:fut/feature/teams/presentation/views/widgets/team_name_field.dart';
+import 'package:fut/generated/l10n.dart';
 
 class CreateTeam extends StatefulWidget {
   const CreateTeam({super.key});
@@ -15,15 +16,23 @@ class CreateTeam extends StatefulWidget {
 }
 
 class _CreateTeamState extends State<CreateTeam> {
-  List<String> dayes = ["SAT", "SUN", "MON", "TUE", "WEN", "THU", "FRI"];
-
   @override
   Widget build(BuildContext context) {
+    List<String> dayes = [
+      S.of(context).satday,
+      S.of(context).sunday,
+      S.of(context).monday,
+      S.of(context).tuethday,
+      S.of(context).wensday,
+      S.of(context).thurtday,
+      S.of(context).friday
+    ];
+
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
     return Container(
       width: double.infinity,
-      height: width < 1000 ? height * 0.7 : height * (3 / 4),
+      height: width < 1000 ? height * 0.78 : height * (3 / 4),
       margin: EdgeInsets.symmetric(horizontal: width * 0.042918),
       child: SingleChildScrollView(
         child: Column(
@@ -37,7 +46,7 @@ class _CreateTeamState extends State<CreateTeam> {
               child: Row(
                 children: [
                   Text(
-                    "Upload Photo:",
+                    S.of(context).uploadphoto,
                     style: TextStyle(
                       color: SharedColors.whiteColor,
                       fontFamily: "poppin",
@@ -69,7 +78,7 @@ class _CreateTeamState extends State<CreateTeam> {
               child: Row(
                 children: [
                   Text(
-                    "Team Name:",
+                    S.of(context).teamname,
                     style: TextStyle(
                       color: SharedColors.whiteColor,
                       fontFamily: "poppin",
@@ -93,7 +102,7 @@ class _CreateTeamState extends State<CreateTeam> {
               child: Row(
                 children: [
                   Text(
-                    "Preferred Playing Days:",
+                    S.of(context).preferredplayingdays,
                     style: TextStyle(
                       color: SharedColors.whiteColor,
                       fontFamily: "poppin",
@@ -150,7 +159,7 @@ class _CreateTeamState extends State<CreateTeam> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Preferred Playing Areas:",
+                    S.of(context).preferredplayingareas,
                     style: TextStyle(
                       color: SharedColors.whiteColor,
                       fontFamily: "poppin",
@@ -166,7 +175,7 @@ class _CreateTeamState extends State<CreateTeam> {
                     child: Column(
                       children: [
                         CustamDropDwonField(
-                          text: "Primary Area",
+                          text: S.of(context).primaryarea,
                           data: const ["New Cairo", "Naser City"],
                         ),
                         SizedBox(
@@ -175,7 +184,7 @@ class _CreateTeamState extends State<CreateTeam> {
                               : (height * 0.037209) * (2 / 3),
                         ),
                         CustamDropDwonField(
-                          text: "Primary Area",
+                          text: S.of(context).primaryarea,
                           data: const ["New Cairo", "Naser City"],
                         ),
                         SizedBox(
@@ -184,7 +193,7 @@ class _CreateTeamState extends State<CreateTeam> {
                               : (height * 0.037209) * (2 / 3),
                         ),
                         CustamDropDwonField(
-                          text: "Primary Area",
+                          text: S.of(context).primaryarea,
                           data: const ["New Cairo", "Naser City"],
                         )
                       ],
@@ -201,7 +210,7 @@ class _CreateTeamState extends State<CreateTeam> {
                       builder: (context) => const LoginScreen(),
                     )); */
                   },
-                  text: "Create",
+                  text: S.of(context).create,
                   gradient: const LinearGradient(colors: [
                     Color(0xff9A8E14),
                     Color(0xff95A324),

@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fut/core/responsive_font.dart';
 import 'package:fut/core/theme/colors.dart';
 import 'package:fut/feature/login/presentation/views/widgets/login_form.dart';
+import 'package:fut/generated/l10n.dart';
 
 class LoginContainer extends StatefulWidget {
   const LoginContainer({super.key});
@@ -37,7 +38,7 @@ class _LoginContainerState extends State<LoginContainer> {
             height: height * 0.0488,
           ),
           Text(
-            "Welcome",
+            S.of(context).welcome,
             style: TextStyle(
               fontSize: getResponsiveFont(context, fontSize: 36),
               fontWeight: FontWeight.w600,

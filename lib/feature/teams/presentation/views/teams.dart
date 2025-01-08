@@ -8,6 +8,7 @@ import 'package:fut/core/theme/colors.dart';
 import 'package:fut/feature/teams/presentation/views/widgets/create_team.dart';
 import 'package:fut/feature/teams/presentation/views/widgets/my_team.dart';
 import 'package:fut/feature/teams/presentation/views/widgets/othe_teams.dart';
+import 'package:fut/generated/l10n.dart';
 import 'package:video_player/video_player.dart';
 
 class TeamsScreen extends StatefulWidget {
@@ -18,7 +19,6 @@ class TeamsScreen extends StatefulWidget {
 }
 
 class _TeamsScreenState extends State<TeamsScreen> {
-  List<String> teamsType = ["MyTeams", "OtherTeams", "+CreateTeam"];
   List screens = [
     const MyTeamScreen(),
     const OtheTeamsScreen(),
@@ -46,6 +46,12 @@ class _TeamsScreenState extends State<TeamsScreen> {
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
     debugPrint(width.toString());
+    List<String> teamsType = [
+      S.of(context).myteams,
+      S.of(context).otherteams,
+      S.of(context).createteam
+    ];
+
     return DefaultTabController(
       length: 3,
       child: Scaffold(
@@ -85,7 +91,7 @@ class _TeamsScreenState extends State<TeamsScreen> {
                   leading: const CustamAppBar(),
                   actions: [
                     Text(
-                      "Sponsored By",
+                      S.of(context).sponsoredby,
                       style: TextStyle(
                         color: SharedColors.whiteColor,
                         fontFamily: "poppin",

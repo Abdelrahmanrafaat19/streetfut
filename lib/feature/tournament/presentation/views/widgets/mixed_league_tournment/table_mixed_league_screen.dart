@@ -6,6 +6,7 @@ import 'package:fut/core/src/model/tournament_match.dart';
 import 'package:fut/core/src/model/tournament_model.dart';
 import 'package:fut/core/theme/colors.dart';
 import 'package:fut/feature/tournament/presentation/views/widgets/mixed_league_tournment/groups_table.dart';
+import 'package:fut/generated/l10n.dart';
 
 final List<Tournament> _tournaments = [
   Tournament(matches: [
@@ -49,18 +50,18 @@ class _TableMixedLeagueScreenState extends State<TableMixedLeagueScreen> {
     var height = MediaQuery.of(context).size.height;
     return SizedBox(
       width: double.infinity,
-      height: width < 1000 ? height * 0.7 : height * 0.73,
+      height: width < 1000 ? height * 0.75 : height * 0.73,
       child: SingleChildScrollView(
         child: Column(
           children: [
             SizedBox(
               height: width > 1000 ? height * 0.03982 : 0.0,
             ),
-            const Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                GroupTable(groupName: "GroupA"),
-                GroupTable(groupName: "GroupB")
+                GroupTable(groupName: S.of(context).groupa),
+                GroupTable(groupName: S.of(context).groupb)
               ],
             ),
             const SizedBox(
@@ -129,7 +130,7 @@ class _TableMixedLeagueScreenState extends State<TableMixedLeagueScreen> {
                           height: height * 0.053488,
                         ),
                         Text(
-                          "Champions",
+                          S.of(context).champions,
                           style: TextStyle(
                               color: SharedColors.whiteColor,
                               fontFamily: "poppin",

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fut/core/theme/colors.dart';
+import 'package:fut/generated/l10n.dart';
 
 class TableMvp extends StatelessWidget {
   const TableMvp({super.key});
@@ -37,7 +38,7 @@ class TableMvp extends StatelessWidget {
               ),
             ),
             child: Text(
-              "MVP",
+              S.of(context).mvp,
               style: TextStyle(
                 color: SharedColors.whiteColor,
                 fontFamily: "poppin",
@@ -69,7 +70,7 @@ class TableMvp extends StatelessWidget {
                           horizontal: 4,
                         ),
                         child: Text(
-                          "Rank",
+                          S.of(context).rank,
                           style: TextStyle(
                             color: SharedColors.whiteColor,
                             fontWeight: FontWeight.w600,
@@ -84,7 +85,7 @@ class TableMvp extends StatelessWidget {
                           horizontal: 4,
                         ),
                         child: Text(
-                          "Name",
+                          S.of(context).name,
                           style: TextStyle(
                             color: SharedColors.whiteColor,
                             fontWeight: FontWeight.w500,
@@ -99,7 +100,7 @@ class TableMvp extends StatelessWidget {
                           horizontal: 4,
                         ),
                         child: Text(
-                          "Rating",
+                          S.of(context).rating,
                           style: TextStyle(
                             color: SharedColors.whiteColor,
                             fontWeight: FontWeight.w500,
@@ -114,7 +115,7 @@ class TableMvp extends StatelessWidget {
                           horizontal: 4,
                         ),
                         child: Text(
-                          "Team",
+                          S.of(context).team,
                           style: TextStyle(
                             color: SharedColors.whiteColor,
                             fontWeight: FontWeight.w500,

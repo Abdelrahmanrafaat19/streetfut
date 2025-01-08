@@ -7,6 +7,7 @@ import 'package:fut/core/responsive_font.dart';
 import 'package:fut/core/theme/colors.dart';
 import 'package:fut/feature/teams/presentation/views/widgets/othe_teams.dart';
 import 'package:fut/feature/tournament/presentation/views/widgets/mixed_tournment/mixed_tournment_table.dart';
+import 'package:fut/generated/l10n.dart';
 import 'package:video_player/video_player.dart';
 
 class MixedTournmentScreen extends StatefulWidget {
@@ -17,10 +18,6 @@ class MixedTournmentScreen extends StatefulWidget {
 }
 
 class _MixedTournmentScreenState extends State<MixedTournmentScreen> {
-  List<String> teamsType = [
-    "table",
-    "Fixtures & Details",
-  ];
   List screens = [
     const MixedTournmentTable(),
     const OtheTeamsScreen(),
@@ -47,6 +44,10 @@ class _MixedTournmentScreenState extends State<MixedTournmentScreen> {
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
     debugPrint(width.toString());
+    List<String> teamsType = [
+      S.of(context).table,
+      S.of(context).fixtureanddetails,
+    ];
     return DefaultTabController(
       length: teamsType.length,
       child: Scaffold(

@@ -9,6 +9,8 @@ import 'package:fut/feature/tournament/presentation/views/widgets/league_tournme
 import 'package:fut/feature/tournament/presentation/views/widgets/league_tournment/table_league.dart';
 import 'package:video_player/video_player.dart';
 
+import '../../../../../../generated/l10n.dart';
+
 class LeagueTournmentScreen extends StatefulWidget {
   const LeagueTournmentScreen({super.key});
 
@@ -17,10 +19,6 @@ class LeagueTournmentScreen extends StatefulWidget {
 }
 
 class _LeagueTournmentScreenState extends State<LeagueTournmentScreen> {
-  List<String> teamsType = [
-    "table",
-    "Fixtures & Details",
-  ];
   List screens = [
     const TableLeagueScreen(),
     const FixtureDetailsScreen(),
@@ -44,6 +42,10 @@ class _LeagueTournmentScreenState extends State<LeagueTournmentScreen> {
 
   @override
   Widget build(BuildContext context) {
+    List<String> teamsType = [
+      S.of(context).table,
+      S.of(context).fixtureanddetails,
+    ];
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
     debugPrint(width.toString());
@@ -84,7 +86,7 @@ class _LeagueTournmentScreenState extends State<LeagueTournmentScreen> {
 
                   actions: [
                     Text(
-                      "Sponsored By",
+                      S.of(context).sponsoredby,
                       style: TextStyle(
                         color: SharedColors.whiteColor,
                         fontFamily: "poppin",

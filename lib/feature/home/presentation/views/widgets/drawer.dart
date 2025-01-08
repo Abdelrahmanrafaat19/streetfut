@@ -9,6 +9,7 @@ import 'package:fut/feature/pitches/presentation/views/pitches.dart';
 import 'package:fut/feature/referee_mode.dart/presentation/views/refree_profile.dart';
 import 'package:fut/feature/teams/presentation/views/teams.dart';
 import 'package:fut/feature/tournament/presentation/views/tournment.dart';
+import 'package:fut/generated/l10n.dart';
 
 class DrawerHome extends StatefulWidget {
   const DrawerHome({super.key});
@@ -57,7 +58,7 @@ class _DrawerHomeState extends State<DrawerHome> {
               ),
               DrawerContain(
                 imagePath: "assetes/images/playdrawer.png",
-                text: "Play",
+                text: S.of(context).play,
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => const PlayModeScreen(),
@@ -69,7 +70,7 @@ class _DrawerHomeState extends State<DrawerHome> {
               ),
               DrawerContain(
                 imagePath: "assetes/images/teamdrawer.png",
-                text: "Teams",
+                text: S.of(context).teams,
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => const TeamsScreen(),
@@ -81,7 +82,7 @@ class _DrawerHomeState extends State<DrawerHome> {
               ),
               DrawerContain(
                 imagePath: "assetes/images/tournmentdrawer.png",
-                text: "Tourtment",
+                text: S.of(context).tourtment,
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => const TournmentScreen(),
@@ -93,7 +94,7 @@ class _DrawerHomeState extends State<DrawerHome> {
               ),
               DrawerContain(
                 imagePath: "assetes/images/workoutdrawer.png",
-                text: "Work Out",
+                text: S.of(context).workout,
                 onTap: () {},
               ),
               const Divider(
@@ -101,7 +102,7 @@ class _DrawerHomeState extends State<DrawerHome> {
               ),
               DrawerContain(
                 imagePath: "assetes/images/pointdrawer.png",
-                text: "Points Earned",
+                text: S.of(context).pointearned,
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => const EarningPointsScreen(),
@@ -113,7 +114,7 @@ class _DrawerHomeState extends State<DrawerHome> {
               ),
               DrawerContain(
                 imagePath: "assetes/images/pitdrawer.png",
-                text: "Pitches",
+                text: S.of(context).pitches,
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => const PitchesScreens(),
@@ -125,7 +126,7 @@ class _DrawerHomeState extends State<DrawerHome> {
               ),
               DrawerContain(
                 imagePath: "assetes/images/refdrawer.png",
-                text: "Referee Mode",
+                text: S.of(context).refereemode,
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => const RefreeProfile(),
@@ -158,7 +159,7 @@ class _DrawerHomeState extends State<DrawerHome> {
                         width: width * 0.010729,
                       ),
                       Text(
-                        "LogOut",
+                        S.of(context).logout,
                         style: TextStyle(
                           color: SharedColors.whiteColor,
                           fontFamily: "poppin",

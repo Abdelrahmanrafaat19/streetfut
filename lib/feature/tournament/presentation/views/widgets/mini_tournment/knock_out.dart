@@ -5,6 +5,7 @@ import 'package:fut/core/theme/colors.dart';
 import 'package:fut/core/src/flutter_tournament_bracket.dart';
 import 'package:fut/core/src/model/tournament_match.dart';
 import 'package:fut/core/src/model/tournament_model.dart';
+import 'package:fut/generated/l10n.dart';
 
 final List<Tournament> _tournaments = [
   Tournament(matches: [
@@ -119,7 +120,7 @@ class _KnockOutScreenState extends State<KnockOutScreen> {
                           height: height * 0.053488,
                         ),
                         Text(
-                          "Champions",
+                          S.of(context).champions,
                           style: TextStyle(
                               color: SharedColors.whiteColor,
                               fontFamily: "poppin",

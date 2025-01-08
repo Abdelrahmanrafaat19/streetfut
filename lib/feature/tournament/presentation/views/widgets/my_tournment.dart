@@ -4,6 +4,7 @@ import 'package:fut/feature/tournament/presentation/views/widgets/league_tournme
 import 'package:fut/feature/tournament/presentation/views/widgets/mini_tournment/mini_tournment.dart';
 import 'package:fut/feature/tournament/presentation/views/widgets/mixed_league_tournment/mixed_league_tournment.dart';
 import 'package:fut/feature/tournament/presentation/views/widgets/mixed_tournment/mixed_tournment_screen.dart';
+import 'package:fut/generated/l10n.dart';
 
 class MyTournmentScreen extends StatefulWidget {
   const MyTournmentScreen({super.key});
@@ -93,7 +94,7 @@ class _MyTournmentScreenState extends State<MyTournmentScreen> {
                           Row(
                             children: [
                               Text(
-                                "Type:",
+                                S.of(context).type,
                                 style: TextStyle(
                                   fontFamily: "poppin",
                                   fontWeight: FontWeight.w600,
@@ -126,7 +127,7 @@ class _MyTournmentScreenState extends State<MyTournmentScreen> {
                             Row(
                               children: [
                                 Text(
-                                  "Area:",
+                                  S.of(context).area,
                                   style: TextStyle(
                                     fontFamily: "poppin",
                                     fontWeight: FontWeight.w600,
@@ -151,7 +152,7 @@ class _MyTournmentScreenState extends State<MyTournmentScreen> {
                             Row(
                               children: [
                                 Text(
-                                  "to:",
+                                  S.of(context).from,
                                   style: TextStyle(
                                     fontFamily: "poppin",
                                     fontWeight: FontWeight.w600,
@@ -172,7 +173,7 @@ class _MyTournmentScreenState extends State<MyTournmentScreen> {
                                   width: 10,
                                 ),
                                 Text(
-                                  "from:",
+                                  S.of(context).to,
                                   style: TextStyle(
                                     fontFamily: "poppin",
                                     fontWeight: FontWeight.w600,

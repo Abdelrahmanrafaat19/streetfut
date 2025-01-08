@@ -5,6 +5,7 @@ import 'package:fut/core/component/custam_drop_down_field.dart';
 import 'package:fut/core/theme/colors.dart';
 import 'package:fut/feature/match_mode/presentation/views/play_mode.dart';
 import 'package:fut/feature/pitches/presentation/views/widgets/search_field.dart';
+import 'package:fut/generated/l10n.dart';
 import 'package:page_transition/page_transition.dart';
 
 class MyTeamScreen extends StatefulWidget {
@@ -24,8 +25,8 @@ class _MyTeamScreenState extends State<MyTeamScreen> {
         const SizedBox(
           height: 10,
         ),
-        const SearchField(
-          hint: "Search by team ID",
+        SearchField(
+          hint: S.of(context).searchbyteamID,
         ),
         const SizedBox(
           height: 10,
@@ -35,14 +36,14 @@ class _MyTeamScreenState extends State<MyTeamScreen> {
           children: [
             CustamDropDwonField(
               data: const ["Naser_city", "New_cairo"],
-              text: "Area",
+              text: S.of(context).area,
             ),
             SizedBox(
               width: width * 0.02896,
             ),
             CustamDropDwonField(
               data: const ["Naser_city", "New_cairo"],
-              text: "Sort By",
+              text: S.of(context).sortby,
             ),
           ],
         ),

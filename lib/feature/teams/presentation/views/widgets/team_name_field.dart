@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fut/core/responsive_font.dart';
 import 'package:fut/core/theme/colors.dart';
+import 'package:fut/generated/l10n.dart';
 
 class TeamNameField extends StatelessWidget {
   const TeamNameField({super.key});
@@ -30,7 +31,7 @@ class TeamNameField extends StatelessWidget {
             borderSide: BorderSide.none,
             borderRadius: BorderRadius.circular(10),
           ),
-          hintText: "  name of team",
+          hintText: "  ${S.of(context).nameofteam}",
           hintStyle: TextStyle(
               color: SharedColors.greenColor,
               fontSize: getResponsiveFont(context, fontSize: 15),

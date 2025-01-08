@@ -5,6 +5,7 @@ import 'package:fut/core/component/default_button.dart';
 import 'package:fut/core/responsive_font.dart';
 import 'package:fut/core/theme/colors.dart';
 import 'package:fut/feature/tournament/presentation/views/widgets/count_of_teams_in_tournment_field.dart';
+import 'package:fut/generated/l10n.dart';
 import 'package:intl/intl.dart';
 
 class RequestTournment extends StatefulWidget {
@@ -36,7 +37,7 @@ class _RequestTournmentState extends State<RequestTournment> {
               children: [
                 Expanded(
                   child: Text(
-                    "Count of teams",
+                    S.of(context).countofteam,
                     style: TextStyle(
                       color: SharedColors.whiteColor,
                       fontWeight: FontWeight.bold,
@@ -55,7 +56,7 @@ class _RequestTournmentState extends State<RequestTournment> {
               children: [
                 Expanded(
                   child: Text(
-                    "Types of tournament",
+                    S.of(context).typesoftournment,
                     style: TextStyle(
                       color: SharedColors.whiteColor,
                       fontWeight: FontWeight.bold,
@@ -65,7 +66,7 @@ class _RequestTournmentState extends State<RequestTournment> {
                   ),
                 ),
                 CustamDropDwonField(
-                  text: "Type",
+                  text: S.of(context).type,
                   data: const ["knockOut", "Mixed"],
                 )
               ],
@@ -77,7 +78,7 @@ class _RequestTournmentState extends State<RequestTournment> {
               children: [
                 Expanded(
                   child: Text(
-                    "Area",
+                    S.of(context).type,
                     style: TextStyle(
                       color: SharedColors.whiteColor,
                       fontWeight: FontWeight.bold,
@@ -87,7 +88,7 @@ class _RequestTournmentState extends State<RequestTournment> {
                   ),
                 ),
                 CustamDropDwonField(
-                  text: "Area",
+                  text: S.of(context).area,
                   data: const ["NasrCity", "NewCairo"],
                 )
               ],
@@ -99,7 +100,7 @@ class _RequestTournmentState extends State<RequestTournment> {
               children: [
                 Expanded(
                   child: Text(
-                    "Date & Time “Start”",
+                    S.of(context).dateandtime,
                     style: TextStyle(
                       color: SharedColors.whiteColor,
                       fontWeight: FontWeight.bold,
@@ -122,7 +123,7 @@ class _RequestTournmentState extends State<RequestTournment> {
                           : null,
                       fillColor: SharedColors.whiteColor,
                       filled: true,
-                      hintText: "Calender",
+                      hintText: S.of(context).calender,
                       hintStyle: TextStyle(
                         color: SharedColors.greenColor,
                         fontSize: (width * 0.0160944),
@@ -168,7 +169,7 @@ class _RequestTournmentState extends State<RequestTournment> {
               width: width * 0.195,
               height: height * 0.0953,
               child: defaultButton(
-                  text: "Submit",
+                  text: S.of(context).submit,
                   gradient: const LinearGradient(colors: [
                     Color(0xff9A8E14),
                     Color(0xff95A324),

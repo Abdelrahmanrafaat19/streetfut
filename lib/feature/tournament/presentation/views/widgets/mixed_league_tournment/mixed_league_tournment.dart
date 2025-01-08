@@ -7,6 +7,7 @@ import 'package:fut/core/responsive_font.dart';
 import 'package:fut/core/theme/colors.dart';
 import 'package:fut/feature/teams/presentation/views/widgets/othe_teams.dart';
 import 'package:fut/feature/tournament/presentation/views/widgets/mixed_league_tournment/table_mixed_league_screen.dart';
+import 'package:fut/generated/l10n.dart';
 import 'package:video_player/video_player.dart';
 
 class MixedLeagueTournmentScreen extends StatefulWidget {
@@ -19,10 +20,6 @@ class MixedLeagueTournmentScreen extends StatefulWidget {
 
 class _MixedLeagueTournmentScreenState
     extends State<MixedLeagueTournmentScreen> {
-  List<String> teamsType = [
-    "table",
-    "Fixtures & Details",
-  ];
   List screens = [
     const TableMixedLeagueScreen(),
     const OtheTeamsScreen(),
@@ -49,6 +46,10 @@ class _MixedLeagueTournmentScreenState
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
     debugPrint(width.toString());
+    List<String> teamsType = [
+      S.of(context).table,
+      S.of(context).fixtureanddetails,
+    ];
     return DefaultTabController(
       length: teamsType.length,
       child: Scaffold(
@@ -86,7 +87,7 @@ class _MixedLeagueTournmentScreenState
                   leading: const CustamAppBar(),
                   actions: [
                     Text(
-                      "Sponsored By",
+                      S.of(context).sponsoredby,
                       style: TextStyle(
                         color: SharedColors.whiteColor,
                         fontFamily: "poppin",

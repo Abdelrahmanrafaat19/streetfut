@@ -5,6 +5,7 @@ import 'package:fut/core/component/custam_drop_down_field.dart';
 import 'package:fut/core/responsive_font.dart';
 import 'package:fut/core/theme/colors.dart';
 import 'package:fut/feature/pitches/presentation/views/widgets/search_field.dart';
+import 'package:fut/generated/l10n.dart';
 
 class OtheTeamsScreen extends StatefulWidget {
   const OtheTeamsScreen({super.key});
@@ -23,8 +24,8 @@ class _OtheTeamsScreenState extends State<OtheTeamsScreen> {
         const SizedBox(
           height: 10,
         ),
-        const SearchField(
-          hint: "Search by team ID",
+        SearchField(
+          hint: S.of(context).searchbyteamID,
         ),
         const SizedBox(
           height: 10,
@@ -34,20 +35,20 @@ class _OtheTeamsScreenState extends State<OtheTeamsScreen> {
           children: [
             CustamDropDwonField(
               data: const ["Naser_city", "New_cairo"],
-              text: "Area",
+              text: S.of(context).area,
             ),
             SizedBox(
               width: width * 0.02896,
             ),
             CustamDropDwonField(
               data: const ["Naser_city", "New_cairo"],
-              text: "Sort By",
+              text: S.of(context).sortby,
             ),
           ],
         ),
         SizedBox(
           width: double.infinity,
-          height: width < 1000 ? height * 0.45 : height * 0.6,
+          height: width < 1000 ? height * 0.55 : height * 0.6,
           child: ListView.builder(
               itemCount: 250,
               itemBuilder: (context, index) => Container(
@@ -190,7 +191,7 @@ class _OtheTeamsScreenState extends State<OtheTeamsScreen> {
                             borderRadius: BorderRadius.circular(10.r),
                           ),
                           child: Text(
-                            "Request To Join",
+                            S.of(context).requesttojoin,
                             style: TextStyle(
                               color: SharedColors.whiteColor,
                               fontFamily: "poppin",

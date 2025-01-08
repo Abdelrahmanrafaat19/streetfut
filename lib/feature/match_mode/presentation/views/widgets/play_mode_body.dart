@@ -5,6 +5,7 @@ import 'package:fut/core/get_width_height_method.dart';
 import 'package:fut/core/responsive_font.dart';
 import 'package:fut/core/theme/colors.dart';
 import 'package:fut/feature/match_mode/presentation/views/widgets/tabs_play_mode.dart';
+import 'package:fut/generated/l10n.dart';
 
 class PlayModeBody extends StatelessWidget {
   PlayModeBody({super.key});
@@ -41,7 +42,7 @@ class PlayModeBody extends StatelessWidget {
               toolbarHeight: width < 1000 ? height * 0.081395 : height * 0.0813,
               actions: [
                 Text(
-                  "Sponsored By",
+                  S.of(context).sponsoredby,
                   style: TextStyle(
                     color: SharedColors.whiteColor,
                     fontFamily: "poppin",
@@ -115,18 +116,18 @@ class PlayModeBody extends StatelessWidget {
                     ),
                     Row(
                       children: [
-                        const TabsPlayMode(
+                        TabsPlayMode(
                           iconPath: "assetes/svg/balll.svg",
                           imagePath: "assetes/images/booking.png",
-                          name: "Pitch Booking",
+                          name: S.of(context).pitchbooking,
                         ),
                         SizedBox(
                           width: width * 0.03969,
                         ),
-                        const TabsPlayMode(
+                        TabsPlayMode(
                           iconPath: "assetes/svg/friendmatch.svg",
                           imagePath: "assetes/images/frindlymatch.png",
-                          name: "Friendly Match",
+                          name: S.of(context).friendlymatch,
                         ),
                       ],
                     ),
@@ -135,18 +136,18 @@ class PlayModeBody extends StatelessWidget {
                     ),
                     Row(
                       children: [
-                        const TabsPlayMode(
+                        TabsPlayMode(
                           iconPath: "assetes/svg/tro.svg",
                           imagePath: "assetes/images/entertournment.png",
-                          name: "Enter Tournment",
+                          name: S.of(context).friendlymatch,
                         ),
                         SizedBox(
                           width: width * 0.03969,
                         ),
-                        const TabsPlayMode(
+                        TabsPlayMode(
                           iconPath: "assetes/svg/challengeteam.svg",
                           imagePath: "assetes/images/challngeteam.png",
-                          name: "Challenge Team",
+                          name: S.of(context).challengeteam,
                         ),
                       ],
                     )

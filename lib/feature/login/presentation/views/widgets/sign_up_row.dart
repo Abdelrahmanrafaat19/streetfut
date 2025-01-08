@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:fut/core/theme/colors.dart';
 import 'package:fut/feature/sign_up/presentation/views/sig_up_screen.dart';
 
+import '../../../../../generated/l10n.dart';
+
 class SignUpRow extends StatelessWidget {
   const SignUpRow({super.key});
 
@@ -12,7 +14,7 @@ class SignUpRow extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          "Dont’t have an account yet?",
+          S.of(context).loginask,
           style: TextStyle(
             fontSize: width * 0.01716,
             fontWeight: FontWeight.normal,
@@ -30,7 +32,7 @@ class SignUpRow extends StatelessWidget {
             ));
           },
           child: Text(
-            "SignUp",
+            S.of(context).signup,
             style: TextStyle(
               fontSize: width * 0.01716,
               fontWeight: FontWeight.bold,

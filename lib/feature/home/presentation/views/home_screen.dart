@@ -6,6 +6,7 @@ import 'package:fut/core/theme/colors.dart';
 import 'package:fut/feature/home/presentation/views/widgets/drawer.dart';
 import 'package:fut/feature/home/presentation/views/widgets/home_body.dart';
 import 'package:fut/feature/pitches/presentation/views/widgets/titel_pitches_screen.dart';
+import 'package:fut/generated/l10n.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -87,7 +88,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         actions: [
           Text(
-            "Sponsored By",
+            S.of(context).sponsoredby,
             style: TextStyle(
               color: SharedColors.whiteColor,
               fontFamily: "poppin",
