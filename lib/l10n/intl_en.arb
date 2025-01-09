@@ -64,6 +64,12 @@
     "team":"Team",
     "rating":"Rating",
     "groupa":"GroupA",
-    "groupb":"GroubB"
+    "groupb":"GroubB",
+    "all":"All",
+    "choose":"Choose",
+    "time":"Time",
+    "price":"Price",
+    "location":"Location",
+    "searchlocation":"Shearch For a Pitch or Location"
 
 }
